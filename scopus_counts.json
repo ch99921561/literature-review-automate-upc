@@ -1,0 +1,61 @@
+{
+  "mode": "sencilla",
+  "filters": {
+    "year_from": 2020,
+    "year_to": 2025,
+    "doc_types": [
+      "ar",
+      "re",
+      "cp",
+      "bk"
+    ],
+    "subject_areas": null
+  },
+  "terms": [
+    {
+      "term": "CSIRT",
+      "count": 213
+    },
+    {
+      "term": "SOC",
+      "count": 1667008
+    },
+    {
+      "term": "Security Operations Center",
+      "count": 90380
+    },
+    {
+      "term": "cybersecurity act",
+      "count": 9316
+    },
+    {
+      "term": "risk-based prioritization",
+      "count": 4793
+    },
+    {
+      "term": "SOC service catalog",
+      "count": 14403
+    },
+    {
+      "term": "privacy act",
+      "count": 33293
+    },
+    {
+      "term": "incident cost",
+      "count": 76928
+    },
+    {
+      "term": "SOC operating model",
+      "count": 53855
+    },
+    {
+      "term": "breach notification act",
+      "count": 515
+    },
+    {
+      "term": "economic impact",
+      "count": 1812480
+    }
+  ],
+  "total_sum": 3763184
+}
