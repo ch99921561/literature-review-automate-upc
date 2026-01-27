@@ -4,31 +4,83 @@ Documentación: https://dev.elsevier.com/documentation/SCOPUSSearchAPI.wadl
 
 Para usar:
 1. Setea tu API key: $Env:SCOPUS_API_KEY = "tu_api_key"
-2. Ejecuta:
-   - Modo sencillo (solo conteo): python scopus_api.py --sencilla
+2. Configura scopus_input.json con tus keywords y filtros
+3. Ejecuta:
+   - Modo sencillo (conteo desde JSON): python scopus_api.py --sencilla
    - Modo extendido (resultados detallados): python scopus_api.py --extendida
    - Sin parámetro: te pregunta qué modo usar
 """
 
 import argparse
+import itertools
 import json
 import os
 import sys
 import time
 import urllib.parse
 import urllib.request
+from datetime import datetime
 from typing import Any, Dict
+
+# Archivo de configuración de entrada
+INPUT_FILE = "scopus_input.json"
+LOG_DIR = "logs"
 
 # Endpoints de la API de Scopus
 BASE_URL = "https://api.elsevier.com/content"
 SEARCH_URL = f"{BASE_URL}/search/scopus"
 ABSTRACT_URL = f"{BASE_URL}/abstract/scopus_id"
 
+# Variable global para el archivo de log
+log_file_handle = None
+
+
+def init_log_file(mode: str) -> str:
+    """Inicializa el archivo de log con timestamp."""
+    global log_file_handle
+    
+    # Crear directorio de logs si no existe
+    if not os.path.exists(LOG_DIR):
+        os.makedirs(LOG_DIR)
+    
+    # Generar nombre con timestamp
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_filename = f"{LOG_DIR}/scopus_{mode}_{timestamp}.log"
+    
+    log_file_handle = open(log_filename, "w", encoding="utf-8")
+    
+    # Escribir cabecera
+    write_log(f"=" * 80)
+    write_log(f"SCOPUS API LOG - Modo: {mode}")
+    write_log(f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    write_log(f"=" * 80)
+    
+    return log_filename
+
+
+def write_log(message: str) -> None:
+    """Escribe mensaje tanto a consola como al archivo de log."""
+    print(message)
+    if log_file_handle:
+        log_file_handle.write(message + "\n")
+        log_file_handle.flush()
+
+
+def close_log_file() -> None:
+    """Cierra el archivo de log."""
+    global log_file_handle
+    if log_file_handle:
+        log_file_handle.close()
+        log_file_handle = None
+
 
 def log(title: str) -> None:
-    print(f"\n{'='*60}")
-    print(f"  {title}")
-    print('='*60)
+    msg1 = f"\n{'='*80}"
+    msg2 = f"  {title}"
+    msg3 = '='*80
+    write_log(msg1)
+    write_log(msg2)
+    write_log(msg3)
 
 
 def get_api_key() -> str:
@@ -377,45 +429,85 @@ def get_filters_input() -> tuple:
     return year_from, year_to, doc_types, subject_areas
 
 
+def load_input_config() -> Dict[str, Any]:
+    """Carga la configuración desde el archivo JSON de entrada."""
+    if not os.path.exists(INPUT_FILE):
+        print(f"ERROR: No se encontró el archivo {INPUT_FILE}")
+        print("Creando archivo de ejemplo...")
+        example = {
+            "keywords": ["ejemplo1", "ejemplo2"],
+            "doc_types": [],
+            "subject_areas": [],
+            "year_from": None,
+            "year_to": None
+        }
+        with open(INPUT_FILE, "w", encoding="utf-8") as f:
+            json.dump(example, f, indent=2, ensure_ascii=False)
+        print(f"Archivo {INPUT_FILE} creado. Edítalo y vuelve a ejecutar.")
+        sys.exit(1)
+    
+    with open(INPUT_FILE, "r", encoding="utf-8") as f:
+        config = json.load(f)
+    
+    return config
+
+
 def run_simple_mode(api_key: str) -> int:
-    """Modo SENCILLO: Solo cuenta publicaciones para múltiples términos independientes."""
+    """Modo SENCILLO: Lee desde JSON, cuenta por keyword y combinaciones de 3."""
+    
+    # Inicializar archivo de log
+    log_filename = init_log_file("sencilla")
+    write_log(f"Archivo de log: {log_filename}")
+    
     log("MODO SENCILLO - Solo conteo de publicaciones")
     
-    print("\nIngresa los términos de búsqueda separados por coma.")
-    print("Cada término se buscará de forma INDEPENDIENTE.")
-    print("Ejemplo: machine learning, deep learning, neural networks")
+    # Cargar configuración desde JSON
+    config = load_input_config()
     
-    terms_input = input("\nTérminos de búsqueda: ").strip()
+    keywords = config.get("keywords", [])
+    doc_types = config.get("doc_types", []) or None
+    subject_areas = config.get("subject_areas", []) or None
+    year_from = config.get("year_from")
+    year_to = config.get("year_to")
     
-    if not terms_input:
-        print("ERROR: Debes ingresar al menos un término.")
+    if not keywords:
+        write_log("ERROR: No hay keywords en el archivo scopus_input.json")
+        close_log_file()
         return 1
     
-    # Separar términos por coma
-    terms = [t.strip() for t in terms_input.split(",") if t.strip()]
+    # Convertir listas vacías a None para los filtros
+    if doc_types and len(doc_types) == 0:
+        doc_types = None
+    if subject_areas and len(subject_areas) == 0:
+        subject_areas = None
     
-    print(f"\nSe buscarán {len(terms)} términos independientes.")
+    # Mostrar configuración
+    log("CONFIGURACIÓN CARGADA")
+    write_log(f"Archivo: {INPUT_FILE}")
+    write_log(f"Keywords: {len(keywords)}")
+    for i, kw in enumerate(keywords, 1):
+        write_log(f"  {i}. {kw}")
+    write_log(f"\nFiltros:")
+    write_log(f"  Años: {year_from or 'Sin límite'} - {year_to or 'Sin límite'}")
+    write_log(f"  Tipos de documento: {', '.join(doc_types) if doc_types else 'Todos'}")
+    write_log(f"  Áreas temáticas: {', '.join(subject_areas) if subject_areas else 'Todas'}")
     
-    # Obtener filtros
-    year_from, year_to, doc_types, subject_areas = get_filters_input()
+    # =========================================
+    # PARTE 1: Conteo individual por keyword
+    # =========================================
+    log("RESULTADOS INDIVIDUALES")
+    write_log(f"{'Keyword':<50} | {'Publicaciones':>15}")
+    write_log("-" * 70)
     
-    # Mostrar filtros aplicados
-    log("FILTROS APLICADOS")
-    print(f"Años: {year_from or 'Sin límite'} - {year_to or 'Sin límite'}")
-    print(f"Tipos de documento: {', '.join(doc_types) if doc_types else 'Todos'}")
-    print(f"Áreas temáticas: {', '.join(subject_areas) if subject_areas else 'Todas'}")
+    individual_results = []
+    total_individual = 0
     
-    # Buscar cada término
-    log("RESULTADOS DE CONTEO")
-    print(f"{'Término':<50} | {'Publicaciones':>15}")
-    print("-" * 70)
-    
-    results = []
-    total_all = 0
-    
-    for term in terms:
+    for keyword in keywords:
+        # Query que se envía a Scopus
+        query_sent = f'"{keyword}"'
+        
         count = count_results(
-            query=term,
+            query=query_sent,
             api_key=api_key,
             year_from=year_from,
             year_to=year_to,
@@ -424,35 +516,143 @@ def run_simple_mode(api_key: str) -> int:
         )
         
         if count == -1:
-            print(f"{term:<50} | {'ERROR':>15}")
-            results.append({"term": term, "count": None, "error": True})
+            write_log(f"{keyword:<50} | {'ERROR':>15}")
+            individual_results.append({"keyword": keyword, "query": query_sent, "count": None, "error": True})
         else:
-            print(f"{term:<50} | {count:>15,}")
-            results.append({"term": term, "count": count})
-            total_all += count
+            write_log(f"{keyword:<50} | {count:>15,}")
+            individual_results.append({"keyword": keyword, "query": query_sent, "count": count})
+            total_individual += count
         
-        # Pequeña pausa entre requests
-        time.sleep(0.2)
+        time.sleep(0.25)
     
-    print("-" * 70)
-    print(f"{'TOTAL (suma)':<50} | {total_all:>15,}")
+    write_log("-" * 70)
+    write_log(f"{'TOTAL INDIVIDUAL (suma)':<50} | {total_individual:>15,}")
     
+    # =========================================
+    # PARTE 2: Combinaciones de 3 en 3 (ternas)
+    # =========================================
+    if len(keywords) >= 3:
+        log("COMBINACIONES DE 3 KEYWORDS (TERNAS)")
+        
+        # Generar todas las combinaciones de 3
+        combinations = list(itertools.combinations(keywords, 3))
+        write_log(f"Total de combinaciones posibles: {len(combinations)}")
+        write_log("")
+        
+        combination_results = []
+        total_combinations = 0
+        
+        for idx, combo in enumerate(combinations, 1):
+            # Construir query combinada con AND - ESTO ES LO QUE SE ENVÍA A SCOPUS
+            query = f'"{combo[0]}" AND "{combo[1]}" AND "{combo[2]}"'
+            
+            count = count_results(
+                query=query,
+                api_key=api_key,
+                year_from=year_from,
+                year_to=year_to,
+                doc_types=doc_types,
+                subject_areas=subject_areas,
+            )
+            
+            # Mostrar palabras COMPLETAS
+            display_keywords = f"[{combo[0]}] AND [{combo[1]}] AND [{combo[2]}]"
+            
+            if count == -1:
+                write_log(f"\n{idx:3}. ERROR")
+                write_log(f"     Keywords: {display_keywords}")
+                write_log(f"     Query enviada: {query}")
+                combination_results.append({
+                    "keywords": list(combo),
+                    "query": query,
+                    "count": None,
+                    "error": True
+                })
+            else:
+                write_log(f"\n{idx:3}. Resultados: {count:,}")
+                write_log(f"     Keywords: {display_keywords}")
+                write_log(f"     Query enviada: {query}")
+                combination_results.append({
+                    "keywords": list(combo),
+                    "query": query,
+                    "count": count
+                })
+                total_combinations += count
+            
+            time.sleep(0.25)
+        
+        log("RESUMEN DE COMBINACIONES")
+        write_log(f"Total de combinaciones: {len(combinations)}")
+        write_log(f"Suma de resultados: {total_combinations:,}")
+        
+        # Filtrar combinaciones con resultados > 0
+        combos_with_results = [c for c in combination_results if c.get("count", 0) and c["count"] > 0]
+        write_log(f"Combinaciones con al menos 1 resultado: {len(combos_with_results)}")
+        
+        if combos_with_results:
+            # Ordenar por count descendente
+            combos_with_results.sort(key=lambda x: x["count"], reverse=True)
+            
+            log("TOP 30 COMBINACIONES CON MÁS RESULTADOS")
+            write_log("")
+            write_log(f"{'#':<4} | {'Resultados':>12} | {'Keyword 1':<25} | {'Keyword 2':<25} | {'Keyword 3':<25}")
+            write_log("-" * 100)
+            
+            for i, c in enumerate(combos_with_results[:30], 1):
+                k1 = c['keywords'][0][:24] if len(c['keywords'][0]) > 24 else c['keywords'][0]
+                k2 = c['keywords'][1][:24] if len(c['keywords'][1]) > 24 else c['keywords'][1]
+                k3 = c['keywords'][2][:24] if len(c['keywords'][2]) > 24 else c['keywords'][2]
+                write_log(f"{i:<4} | {c['count']:>12,} | {k1:<25} | {k2:<25} | {k3:<25}")
+            
+            write_log("-" * 100)
+            write_log("")
+            write_log("Detalle de queries enviadas a Scopus:")
+            for i, c in enumerate(combos_with_results[:30], 1):
+                write_log(f"  {i:2}. {c['query']}")
+    else:
+        combination_results = []
+        total_combinations = 0
+        write_log("\nNOTA: Se necesitan al menos 3 keywords para generar combinaciones.")
+    
+    # =========================================
     # Guardar resultados
+    # =========================================
     output_file = "scopus_counts.json"
     output_data = {
         "mode": "sencilla",
+        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "input_file": INPUT_FILE,
         "filters": {
             "year_from": year_from,
             "year_to": year_to,
             "doc_types": doc_types,
             "subject_areas": subject_areas,
         },
-        "terms": results,
-        "total_sum": total_all,
+        "individual_results": {
+            "keywords": individual_results,
+            "total": total_individual,
+        },
+        "combination_results": {
+            "combination_size": 3,
+            "total_combinations": len(combination_results) if keywords and len(keywords) >= 3 else 0,
+            "combinations": combination_results,
+            "total": total_combinations,
+        },
     }
+    
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(output_data, f, indent=2, ensure_ascii=False)
-    print(f"\nResultados guardados en: {output_file}")
+    
+    log("RESUMEN FINAL")
+    write_log(f"Keywords analizados: {len(keywords)}")
+    write_log(f"Total individual: {total_individual:,}")
+    if len(keywords) >= 3:
+        write_log(f"Combinaciones (ternas): {len(combination_results)}")
+        write_log(f"Total combinaciones: {total_combinations:,}")
+    write_log(f"\nResultados guardados en: {output_file}")
+    write_log(f"Log guardado en: {log_filename}")
+    
+    close_log_file()
     
     return 0
 

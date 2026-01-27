@@ -1,5 +1,7 @@
 {
   "mode": "sencilla",
+  "timestamp": "2026-01-27 04:50:05",
+  "input_file": "scopus_input.json",
   "filters": {
     "year_from": 2020,
     "year_to": 2025,
@@ -11,51 +13,3362 @@
     ],
     "subject_areas": null
   },
-  "terms": [
-    {
-      "term": "CSIRT",
-      "count": 213
-    },
-    {
-      "term": "SOC",
-      "count": 1667008
-    },
-    {
-      "term": "Security Operations Center",
-      "count": 90380
-    },
-    {
-      "term": "cybersecurity act",
-      "count": 9316
-    },
-    {
-      "term": "risk-based prioritization",
-      "count": 4793
-    },
-    {
-      "term": "SOC service catalog",
-      "count": 14403
-    },
-    {
-      "term": "privacy act",
-      "count": 33293
-    },
-    {
-      "term": "incident cost",
-      "count": 76928
-    },
-    {
-      "term": "SOC operating model",
-      "count": 53855
-    },
-    {
-      "term": "breach notification act",
-      "count": 515
-    },
-    {
-      "term": "economic impact",
-      "count": 1812480
-    }
-  ],
-  "total_sum": 3763184
+  "individual_results": {
+    "keywords": [
+      {
+        "keyword": "CSIRT",
+        "query": "\"CSIRT\"",
+        "count": 213
+      },
+      {
+        "keyword": "risk management",
+        "query": "\"risk management\"",
+        "count": 331343
+      },
+      {
+        "keyword": "Security Operations Center",
+        "query": "\"Security Operations Center\"",
+        "count": 1306
+      },
+      {
+        "keyword": "cybersecurity act",
+        "query": "\"cybersecurity act\"",
+        "count": 374
+      },
+      {
+        "keyword": "cyber law",
+        "query": "\"cyber law\"",
+        "count": 914
+      },
+      {
+        "keyword": "risk-based prioritization",
+        "query": "\"risk-based prioritization\"",
+        "count": 818
+      },
+      {
+        "keyword": "privacy act",
+        "query": "\"privacy act\"",
+        "count": 2876
+      },
+      {
+        "keyword": "incident cost",
+        "query": "\"incident cost\"",
+        "count": 91
+      },
+      {
+        "keyword": "economic impact",
+        "query": "\"economic impact\"",
+        "count": 172008
+      },
+      {
+        "keyword": "cybersecurity planning",
+        "query": "\"cybersecurity planning\"",
+        "count": 84
+      },
+      {
+        "keyword": "security program management",
+        "query": "\"security program management\"",
+        "count": 14
+      },
+      {
+        "keyword": "security governance",
+        "query": "\"security governance\"",
+        "count": 4785
+      },
+      {
+        "keyword": "cyber incident response",
+        "query": "\"cyber incident response\"",
+        "count": 281
+      },
+      {
+        "keyword": "cyber policy",
+        "query": "\"cyber policy\"",
+        "count": 2111
+      }
+    ],
+    "total": 517218
+  },
+  "combination_results": {
+    "combination_size": 3,
+    "total_combinations": 364,
+    "combinations": [
+      {
+        "keywords": [
+          "CSIRT",
+          "risk management",
+          "Security Operations Center"
+        ],
+        "query": "\"CSIRT\" AND \"risk management\" AND \"Security Operations Center\"",
+        "count": 10
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk management",
+          "cybersecurity act"
+        ],
+        "query": "\"CSIRT\" AND \"risk management\" AND \"cybersecurity act\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk management",
+          "cyber law"
+        ],
+        "query": "\"CSIRT\" AND \"risk management\" AND \"cyber law\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk management",
+          "risk-based prioritization"
+        ],
+        "query": "\"CSIRT\" AND \"risk management\" AND \"risk-based prioritization\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk management",
+          "privacy act"
+        ],
+        "query": "\"CSIRT\" AND \"risk management\" AND \"privacy act\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk management",
+          "incident cost"
+        ],
+        "query": "\"CSIRT\" AND \"risk management\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk management",
+          "economic impact"
+        ],
+        "query": "\"CSIRT\" AND \"risk management\" AND \"economic impact\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk management",
+          "cybersecurity planning"
+        ],
+        "query": "\"CSIRT\" AND \"risk management\" AND \"cybersecurity planning\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk management",
+          "security program management"
+        ],
+        "query": "\"CSIRT\" AND \"risk management\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk management",
+          "security governance"
+        ],
+        "query": "\"CSIRT\" AND \"risk management\" AND \"security governance\"",
+        "count": 6
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk management",
+          "cyber incident response"
+        ],
+        "query": "\"CSIRT\" AND \"risk management\" AND \"cyber incident response\"",
+        "count": 3
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk management",
+          "cyber policy"
+        ],
+        "query": "\"CSIRT\" AND \"risk management\" AND \"cyber policy\"",
+        "count": 3
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "Security Operations Center",
+          "cybersecurity act"
+        ],
+        "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"cybersecurity act\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "Security Operations Center",
+          "cyber law"
+        ],
+        "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"cyber law\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "Security Operations Center",
+          "risk-based prioritization"
+        ],
+        "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"risk-based prioritization\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "Security Operations Center",
+          "privacy act"
+        ],
+        "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"privacy act\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "Security Operations Center",
+          "incident cost"
+        ],
+        "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "Security Operations Center",
+          "economic impact"
+        ],
+        "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "Security Operations Center",
+          "cybersecurity planning"
+        ],
+        "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "Security Operations Center",
+          "security program management"
+        ],
+        "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "Security Operations Center",
+          "security governance"
+        ],
+        "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"security governance\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "Security Operations Center",
+          "cyber incident response"
+        ],
+        "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"cyber incident response\"",
+        "count": 6
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "Security Operations Center",
+          "cyber policy"
+        ],
+        "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"cyber policy\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cybersecurity act",
+          "cyber law"
+        ],
+        "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"cyber law\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cybersecurity act",
+          "risk-based prioritization"
+        ],
+        "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"risk-based prioritization\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cybersecurity act",
+          "privacy act"
+        ],
+        "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"privacy act\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cybersecurity act",
+          "incident cost"
+        ],
+        "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cybersecurity act",
+          "economic impact"
+        ],
+        "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"economic impact\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cybersecurity act",
+          "cybersecurity planning"
+        ],
+        "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cybersecurity act",
+          "security program management"
+        ],
+        "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cybersecurity act",
+          "security governance"
+        ],
+        "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"security governance\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cybersecurity act",
+          "cyber incident response"
+        ],
+        "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cybersecurity act",
+          "cyber policy"
+        ],
+        "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"cyber policy\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cyber law",
+          "risk-based prioritization"
+        ],
+        "query": "\"CSIRT\" AND \"cyber law\" AND \"risk-based prioritization\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cyber law",
+          "privacy act"
+        ],
+        "query": "\"CSIRT\" AND \"cyber law\" AND \"privacy act\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cyber law",
+          "incident cost"
+        ],
+        "query": "\"CSIRT\" AND \"cyber law\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cyber law",
+          "economic impact"
+        ],
+        "query": "\"CSIRT\" AND \"cyber law\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cyber law",
+          "cybersecurity planning"
+        ],
+        "query": "\"CSIRT\" AND \"cyber law\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cyber law",
+          "security program management"
+        ],
+        "query": "\"CSIRT\" AND \"cyber law\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cyber law",
+          "security governance"
+        ],
+        "query": "\"CSIRT\" AND \"cyber law\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cyber law",
+          "cyber incident response"
+        ],
+        "query": "\"CSIRT\" AND \"cyber law\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cyber law",
+          "cyber policy"
+        ],
+        "query": "\"CSIRT\" AND \"cyber law\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk-based prioritization",
+          "privacy act"
+        ],
+        "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"privacy act\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk-based prioritization",
+          "incident cost"
+        ],
+        "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk-based prioritization",
+          "economic impact"
+        ],
+        "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk-based prioritization",
+          "cybersecurity planning"
+        ],
+        "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk-based prioritization",
+          "security program management"
+        ],
+        "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk-based prioritization",
+          "security governance"
+        ],
+        "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk-based prioritization",
+          "cyber incident response"
+        ],
+        "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "risk-based prioritization",
+          "cyber policy"
+        ],
+        "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "privacy act",
+          "incident cost"
+        ],
+        "query": "\"CSIRT\" AND \"privacy act\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "privacy act",
+          "economic impact"
+        ],
+        "query": "\"CSIRT\" AND \"privacy act\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "privacy act",
+          "cybersecurity planning"
+        ],
+        "query": "\"CSIRT\" AND \"privacy act\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "privacy act",
+          "security program management"
+        ],
+        "query": "\"CSIRT\" AND \"privacy act\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "privacy act",
+          "security governance"
+        ],
+        "query": "\"CSIRT\" AND \"privacy act\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "privacy act",
+          "cyber incident response"
+        ],
+        "query": "\"CSIRT\" AND \"privacy act\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "privacy act",
+          "cyber policy"
+        ],
+        "query": "\"CSIRT\" AND \"privacy act\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "incident cost",
+          "economic impact"
+        ],
+        "query": "\"CSIRT\" AND \"incident cost\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "incident cost",
+          "cybersecurity planning"
+        ],
+        "query": "\"CSIRT\" AND \"incident cost\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "incident cost",
+          "security program management"
+        ],
+        "query": "\"CSIRT\" AND \"incident cost\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "incident cost",
+          "security governance"
+        ],
+        "query": "\"CSIRT\" AND \"incident cost\" AND \"security governance\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "incident cost",
+          "cyber incident response"
+        ],
+        "query": "\"CSIRT\" AND \"incident cost\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "incident cost",
+          "cyber policy"
+        ],
+        "query": "\"CSIRT\" AND \"incident cost\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "economic impact",
+          "cybersecurity planning"
+        ],
+        "query": "\"CSIRT\" AND \"economic impact\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "economic impact",
+          "security program management"
+        ],
+        "query": "\"CSIRT\" AND \"economic impact\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "economic impact",
+          "security governance"
+        ],
+        "query": "\"CSIRT\" AND \"economic impact\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "economic impact",
+          "cyber incident response"
+        ],
+        "query": "\"CSIRT\" AND \"economic impact\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "economic impact",
+          "cyber policy"
+        ],
+        "query": "\"CSIRT\" AND \"economic impact\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cybersecurity planning",
+          "security program management"
+        ],
+        "query": "\"CSIRT\" AND \"cybersecurity planning\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cybersecurity planning",
+          "security governance"
+        ],
+        "query": "\"CSIRT\" AND \"cybersecurity planning\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cybersecurity planning",
+          "cyber incident response"
+        ],
+        "query": "\"CSIRT\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cybersecurity planning",
+          "cyber policy"
+        ],
+        "query": "\"CSIRT\" AND \"cybersecurity planning\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "security program management",
+          "security governance"
+        ],
+        "query": "\"CSIRT\" AND \"security program management\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "security program management",
+          "cyber incident response"
+        ],
+        "query": "\"CSIRT\" AND \"security program management\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "security program management",
+          "cyber policy"
+        ],
+        "query": "\"CSIRT\" AND \"security program management\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "security governance",
+          "cyber incident response"
+        ],
+        "query": "\"CSIRT\" AND \"security governance\" AND \"cyber incident response\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "security governance",
+          "cyber policy"
+        ],
+        "query": "\"CSIRT\" AND \"security governance\" AND \"cyber policy\"",
+        "count": 3
+      },
+      {
+        "keywords": [
+          "CSIRT",
+          "cyber incident response",
+          "cyber policy"
+        ],
+        "query": "\"CSIRT\" AND \"cyber incident response\" AND \"cyber policy\"",
+        "count": 3
+      },
+      {
+        "keywords": [
+          "risk management",
+          "Security Operations Center",
+          "cybersecurity act"
+        ],
+        "query": "\"risk management\" AND \"Security Operations Center\" AND \"cybersecurity act\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "risk management",
+          "Security Operations Center",
+          "cyber law"
+        ],
+        "query": "\"risk management\" AND \"Security Operations Center\" AND \"cyber law\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "risk management",
+          "Security Operations Center",
+          "risk-based prioritization"
+        ],
+        "query": "\"risk management\" AND \"Security Operations Center\" AND \"risk-based prioritization\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "Security Operations Center",
+          "privacy act"
+        ],
+        "query": "\"risk management\" AND \"Security Operations Center\" AND \"privacy act\"",
+        "count": 6
+      },
+      {
+        "keywords": [
+          "risk management",
+          "Security Operations Center",
+          "incident cost"
+        ],
+        "query": "\"risk management\" AND \"Security Operations Center\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "Security Operations Center",
+          "economic impact"
+        ],
+        "query": "\"risk management\" AND \"Security Operations Center\" AND \"economic impact\"",
+        "count": 13
+      },
+      {
+        "keywords": [
+          "risk management",
+          "Security Operations Center",
+          "cybersecurity planning"
+        ],
+        "query": "\"risk management\" AND \"Security Operations Center\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "Security Operations Center",
+          "security program management"
+        ],
+        "query": "\"risk management\" AND \"Security Operations Center\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "Security Operations Center",
+          "security governance"
+        ],
+        "query": "\"risk management\" AND \"Security Operations Center\" AND \"security governance\"",
+        "count": 12
+      },
+      {
+        "keywords": [
+          "risk management",
+          "Security Operations Center",
+          "cyber incident response"
+        ],
+        "query": "\"risk management\" AND \"Security Operations Center\" AND \"cyber incident response\"",
+        "count": 16
+      },
+      {
+        "keywords": [
+          "risk management",
+          "Security Operations Center",
+          "cyber policy"
+        ],
+        "query": "\"risk management\" AND \"Security Operations Center\" AND \"cyber policy\"",
+        "count": 8
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cybersecurity act",
+          "cyber law"
+        ],
+        "query": "\"risk management\" AND \"cybersecurity act\" AND \"cyber law\"",
+        "count": 4
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cybersecurity act",
+          "risk-based prioritization"
+        ],
+        "query": "\"risk management\" AND \"cybersecurity act\" AND \"risk-based prioritization\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cybersecurity act",
+          "privacy act"
+        ],
+        "query": "\"risk management\" AND \"cybersecurity act\" AND \"privacy act\"",
+        "count": 6
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cybersecurity act",
+          "incident cost"
+        ],
+        "query": "\"risk management\" AND \"cybersecurity act\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cybersecurity act",
+          "economic impact"
+        ],
+        "query": "\"risk management\" AND \"cybersecurity act\" AND \"economic impact\"",
+        "count": 7
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cybersecurity act",
+          "cybersecurity planning"
+        ],
+        "query": "\"risk management\" AND \"cybersecurity act\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cybersecurity act",
+          "security program management"
+        ],
+        "query": "\"risk management\" AND \"cybersecurity act\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cybersecurity act",
+          "security governance"
+        ],
+        "query": "\"risk management\" AND \"cybersecurity act\" AND \"security governance\"",
+        "count": 6
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cybersecurity act",
+          "cyber incident response"
+        ],
+        "query": "\"risk management\" AND \"cybersecurity act\" AND \"cyber incident response\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cybersecurity act",
+          "cyber policy"
+        ],
+        "query": "\"risk management\" AND \"cybersecurity act\" AND \"cyber policy\"",
+        "count": 5
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cyber law",
+          "risk-based prioritization"
+        ],
+        "query": "\"risk management\" AND \"cyber law\" AND \"risk-based prioritization\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cyber law",
+          "privacy act"
+        ],
+        "query": "\"risk management\" AND \"cyber law\" AND \"privacy act\"",
+        "count": 6
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cyber law",
+          "incident cost"
+        ],
+        "query": "\"risk management\" AND \"cyber law\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cyber law",
+          "economic impact"
+        ],
+        "query": "\"risk management\" AND \"cyber law\" AND \"economic impact\"",
+        "count": 10
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cyber law",
+          "cybersecurity planning"
+        ],
+        "query": "\"risk management\" AND \"cyber law\" AND \"cybersecurity planning\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cyber law",
+          "security program management"
+        ],
+        "query": "\"risk management\" AND \"cyber law\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cyber law",
+          "security governance"
+        ],
+        "query": "\"risk management\" AND \"cyber law\" AND \"security governance\"",
+        "count": 5
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cyber law",
+          "cyber incident response"
+        ],
+        "query": "\"risk management\" AND \"cyber law\" AND \"cyber incident response\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cyber law",
+          "cyber policy"
+        ],
+        "query": "\"risk management\" AND \"cyber law\" AND \"cyber policy\"",
+        "count": 13
+      },
+      {
+        "keywords": [
+          "risk management",
+          "risk-based prioritization",
+          "privacy act"
+        ],
+        "query": "\"risk management\" AND \"risk-based prioritization\" AND \"privacy act\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "risk-based prioritization",
+          "incident cost"
+        ],
+        "query": "\"risk management\" AND \"risk-based prioritization\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "risk-based prioritization",
+          "economic impact"
+        ],
+        "query": "\"risk management\" AND \"risk-based prioritization\" AND \"economic impact\"",
+        "count": 7
+      },
+      {
+        "keywords": [
+          "risk management",
+          "risk-based prioritization",
+          "cybersecurity planning"
+        ],
+        "query": "\"risk management\" AND \"risk-based prioritization\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "risk-based prioritization",
+          "security program management"
+        ],
+        "query": "\"risk management\" AND \"risk-based prioritization\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "risk-based prioritization",
+          "security governance"
+        ],
+        "query": "\"risk management\" AND \"risk-based prioritization\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "risk-based prioritization",
+          "cyber incident response"
+        ],
+        "query": "\"risk management\" AND \"risk-based prioritization\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "risk-based prioritization",
+          "cyber policy"
+        ],
+        "query": "\"risk management\" AND \"risk-based prioritization\" AND \"cyber policy\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "risk management",
+          "privacy act",
+          "incident cost"
+        ],
+        "query": "\"risk management\" AND \"privacy act\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "privacy act",
+          "economic impact"
+        ],
+        "query": "\"risk management\" AND \"privacy act\" AND \"economic impact\"",
+        "count": 17
+      },
+      {
+        "keywords": [
+          "risk management",
+          "privacy act",
+          "cybersecurity planning"
+        ],
+        "query": "\"risk management\" AND \"privacy act\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "privacy act",
+          "security program management"
+        ],
+        "query": "\"risk management\" AND \"privacy act\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "privacy act",
+          "security governance"
+        ],
+        "query": "\"risk management\" AND \"privacy act\" AND \"security governance\"",
+        "count": 7
+      },
+      {
+        "keywords": [
+          "risk management",
+          "privacy act",
+          "cyber incident response"
+        ],
+        "query": "\"risk management\" AND \"privacy act\" AND \"cyber incident response\"",
+        "count": 4
+      },
+      {
+        "keywords": [
+          "risk management",
+          "privacy act",
+          "cyber policy"
+        ],
+        "query": "\"risk management\" AND \"privacy act\" AND \"cyber policy\"",
+        "count": 6
+      },
+      {
+        "keywords": [
+          "risk management",
+          "incident cost",
+          "economic impact"
+        ],
+        "query": "\"risk management\" AND \"incident cost\" AND \"economic impact\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "risk management",
+          "incident cost",
+          "cybersecurity planning"
+        ],
+        "query": "\"risk management\" AND \"incident cost\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "incident cost",
+          "security program management"
+        ],
+        "query": "\"risk management\" AND \"incident cost\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "incident cost",
+          "security governance"
+        ],
+        "query": "\"risk management\" AND \"incident cost\" AND \"security governance\"",
+        "count": 3
+      },
+      {
+        "keywords": [
+          "risk management",
+          "incident cost",
+          "cyber incident response"
+        ],
+        "query": "\"risk management\" AND \"incident cost\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "incident cost",
+          "cyber policy"
+        ],
+        "query": "\"risk management\" AND \"incident cost\" AND \"cyber policy\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "risk management",
+          "economic impact",
+          "cybersecurity planning"
+        ],
+        "query": "\"risk management\" AND \"economic impact\" AND \"cybersecurity planning\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "risk management",
+          "economic impact",
+          "security program management"
+        ],
+        "query": "\"risk management\" AND \"economic impact\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "economic impact",
+          "security governance"
+        ],
+        "query": "\"risk management\" AND \"economic impact\" AND \"security governance\"",
+        "count": 46
+      },
+      {
+        "keywords": [
+          "risk management",
+          "economic impact",
+          "cyber incident response"
+        ],
+        "query": "\"risk management\" AND \"economic impact\" AND \"cyber incident response\"",
+        "count": 7
+      },
+      {
+        "keywords": [
+          "risk management",
+          "economic impact",
+          "cyber policy"
+        ],
+        "query": "\"risk management\" AND \"economic impact\" AND \"cyber policy\"",
+        "count": 33
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cybersecurity planning",
+          "security program management"
+        ],
+        "query": "\"risk management\" AND \"cybersecurity planning\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cybersecurity planning",
+          "security governance"
+        ],
+        "query": "\"risk management\" AND \"cybersecurity planning\" AND \"security governance\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cybersecurity planning",
+          "cyber incident response"
+        ],
+        "query": "\"risk management\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cybersecurity planning",
+          "cyber policy"
+        ],
+        "query": "\"risk management\" AND \"cybersecurity planning\" AND \"cyber policy\"",
+        "count": 3
+      },
+      {
+        "keywords": [
+          "risk management",
+          "security program management",
+          "security governance"
+        ],
+        "query": "\"risk management\" AND \"security program management\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "security program management",
+          "cyber incident response"
+        ],
+        "query": "\"risk management\" AND \"security program management\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "security program management",
+          "cyber policy"
+        ],
+        "query": "\"risk management\" AND \"security program management\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk management",
+          "security governance",
+          "cyber incident response"
+        ],
+        "query": "\"risk management\" AND \"security governance\" AND \"cyber incident response\"",
+        "count": 7
+      },
+      {
+        "keywords": [
+          "risk management",
+          "security governance",
+          "cyber policy"
+        ],
+        "query": "\"risk management\" AND \"security governance\" AND \"cyber policy\"",
+        "count": 25
+      },
+      {
+        "keywords": [
+          "risk management",
+          "cyber incident response",
+          "cyber policy"
+        ],
+        "query": "\"risk management\" AND \"cyber incident response\" AND \"cyber policy\"",
+        "count": 10
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cybersecurity act",
+          "cyber law"
+        ],
+        "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"cyber law\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cybersecurity act",
+          "risk-based prioritization"
+        ],
+        "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"risk-based prioritization\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cybersecurity act",
+          "privacy act"
+        ],
+        "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"privacy act\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cybersecurity act",
+          "incident cost"
+        ],
+        "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cybersecurity act",
+          "economic impact"
+        ],
+        "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cybersecurity act",
+          "cybersecurity planning"
+        ],
+        "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cybersecurity act",
+          "security program management"
+        ],
+        "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cybersecurity act",
+          "security governance"
+        ],
+        "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"security governance\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cybersecurity act",
+          "cyber incident response"
+        ],
+        "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cybersecurity act",
+          "cyber policy"
+        ],
+        "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"cyber policy\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cyber law",
+          "risk-based prioritization"
+        ],
+        "query": "\"Security Operations Center\" AND \"cyber law\" AND \"risk-based prioritization\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cyber law",
+          "privacy act"
+        ],
+        "query": "\"Security Operations Center\" AND \"cyber law\" AND \"privacy act\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cyber law",
+          "incident cost"
+        ],
+        "query": "\"Security Operations Center\" AND \"cyber law\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cyber law",
+          "economic impact"
+        ],
+        "query": "\"Security Operations Center\" AND \"cyber law\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cyber law",
+          "cybersecurity planning"
+        ],
+        "query": "\"Security Operations Center\" AND \"cyber law\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cyber law",
+          "security program management"
+        ],
+        "query": "\"Security Operations Center\" AND \"cyber law\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cyber law",
+          "security governance"
+        ],
+        "query": "\"Security Operations Center\" AND \"cyber law\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cyber law",
+          "cyber incident response"
+        ],
+        "query": "\"Security Operations Center\" AND \"cyber law\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cyber law",
+          "cyber policy"
+        ],
+        "query": "\"Security Operations Center\" AND \"cyber law\" AND \"cyber policy\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "risk-based prioritization",
+          "privacy act"
+        ],
+        "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"privacy act\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "risk-based prioritization",
+          "incident cost"
+        ],
+        "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "risk-based prioritization",
+          "economic impact"
+        ],
+        "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "risk-based prioritization",
+          "cybersecurity planning"
+        ],
+        "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "risk-based prioritization",
+          "security program management"
+        ],
+        "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "risk-based prioritization",
+          "security governance"
+        ],
+        "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "risk-based prioritization",
+          "cyber incident response"
+        ],
+        "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "risk-based prioritization",
+          "cyber policy"
+        ],
+        "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "privacy act",
+          "incident cost"
+        ],
+        "query": "\"Security Operations Center\" AND \"privacy act\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "privacy act",
+          "economic impact"
+        ],
+        "query": "\"Security Operations Center\" AND \"privacy act\" AND \"economic impact\"",
+        "count": 3
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "privacy act",
+          "cybersecurity planning"
+        ],
+        "query": "\"Security Operations Center\" AND \"privacy act\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "privacy act",
+          "security program management"
+        ],
+        "query": "\"Security Operations Center\" AND \"privacy act\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "privacy act",
+          "security governance"
+        ],
+        "query": "\"Security Operations Center\" AND \"privacy act\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "privacy act",
+          "cyber incident response"
+        ],
+        "query": "\"Security Operations Center\" AND \"privacy act\" AND \"cyber incident response\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "privacy act",
+          "cyber policy"
+        ],
+        "query": "\"Security Operations Center\" AND \"privacy act\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "incident cost",
+          "economic impact"
+        ],
+        "query": "\"Security Operations Center\" AND \"incident cost\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "incident cost",
+          "cybersecurity planning"
+        ],
+        "query": "\"Security Operations Center\" AND \"incident cost\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "incident cost",
+          "security program management"
+        ],
+        "query": "\"Security Operations Center\" AND \"incident cost\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "incident cost",
+          "security governance"
+        ],
+        "query": "\"Security Operations Center\" AND \"incident cost\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "incident cost",
+          "cyber incident response"
+        ],
+        "query": "\"Security Operations Center\" AND \"incident cost\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "incident cost",
+          "cyber policy"
+        ],
+        "query": "\"Security Operations Center\" AND \"incident cost\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "economic impact",
+          "cybersecurity planning"
+        ],
+        "query": "\"Security Operations Center\" AND \"economic impact\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "economic impact",
+          "security program management"
+        ],
+        "query": "\"Security Operations Center\" AND \"economic impact\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "economic impact",
+          "security governance"
+        ],
+        "query": "\"Security Operations Center\" AND \"economic impact\" AND \"security governance\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "economic impact",
+          "cyber incident response"
+        ],
+        "query": "\"Security Operations Center\" AND \"economic impact\" AND \"cyber incident response\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "economic impact",
+          "cyber policy"
+        ],
+        "query": "\"Security Operations Center\" AND \"economic impact\" AND \"cyber policy\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cybersecurity planning",
+          "security program management"
+        ],
+        "query": "\"Security Operations Center\" AND \"cybersecurity planning\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cybersecurity planning",
+          "security governance"
+        ],
+        "query": "\"Security Operations Center\" AND \"cybersecurity planning\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cybersecurity planning",
+          "cyber incident response"
+        ],
+        "query": "\"Security Operations Center\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cybersecurity planning",
+          "cyber policy"
+        ],
+        "query": "\"Security Operations Center\" AND \"cybersecurity planning\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "security program management",
+          "security governance"
+        ],
+        "query": "\"Security Operations Center\" AND \"security program management\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "security program management",
+          "cyber incident response"
+        ],
+        "query": "\"Security Operations Center\" AND \"security program management\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "security program management",
+          "cyber policy"
+        ],
+        "query": "\"Security Operations Center\" AND \"security program management\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "security governance",
+          "cyber incident response"
+        ],
+        "query": "\"Security Operations Center\" AND \"security governance\" AND \"cyber incident response\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "security governance",
+          "cyber policy"
+        ],
+        "query": "\"Security Operations Center\" AND \"security governance\" AND \"cyber policy\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "Security Operations Center",
+          "cyber incident response",
+          "cyber policy"
+        ],
+        "query": "\"Security Operations Center\" AND \"cyber incident response\" AND \"cyber policy\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "cyber law",
+          "risk-based prioritization"
+        ],
+        "query": "\"cybersecurity act\" AND \"cyber law\" AND \"risk-based prioritization\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "cyber law",
+          "privacy act"
+        ],
+        "query": "\"cybersecurity act\" AND \"cyber law\" AND \"privacy act\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "cyber law",
+          "incident cost"
+        ],
+        "query": "\"cybersecurity act\" AND \"cyber law\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "cyber law",
+          "economic impact"
+        ],
+        "query": "\"cybersecurity act\" AND \"cyber law\" AND \"economic impact\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "cyber law",
+          "cybersecurity planning"
+        ],
+        "query": "\"cybersecurity act\" AND \"cyber law\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "cyber law",
+          "security program management"
+        ],
+        "query": "\"cybersecurity act\" AND \"cyber law\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "cyber law",
+          "security governance"
+        ],
+        "query": "\"cybersecurity act\" AND \"cyber law\" AND \"security governance\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "cyber law",
+          "cyber incident response"
+        ],
+        "query": "\"cybersecurity act\" AND \"cyber law\" AND \"cyber incident response\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "cyber law",
+          "cyber policy"
+        ],
+        "query": "\"cybersecurity act\" AND \"cyber law\" AND \"cyber policy\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "risk-based prioritization",
+          "privacy act"
+        ],
+        "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"privacy act\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "risk-based prioritization",
+          "incident cost"
+        ],
+        "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "risk-based prioritization",
+          "economic impact"
+        ],
+        "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "risk-based prioritization",
+          "cybersecurity planning"
+        ],
+        "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "risk-based prioritization",
+          "security program management"
+        ],
+        "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "risk-based prioritization",
+          "security governance"
+        ],
+        "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "risk-based prioritization",
+          "cyber incident response"
+        ],
+        "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "risk-based prioritization",
+          "cyber policy"
+        ],
+        "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "privacy act",
+          "incident cost"
+        ],
+        "query": "\"cybersecurity act\" AND \"privacy act\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "privacy act",
+          "economic impact"
+        ],
+        "query": "\"cybersecurity act\" AND \"privacy act\" AND \"economic impact\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "privacy act",
+          "cybersecurity planning"
+        ],
+        "query": "\"cybersecurity act\" AND \"privacy act\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "privacy act",
+          "security program management"
+        ],
+        "query": "\"cybersecurity act\" AND \"privacy act\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "privacy act",
+          "security governance"
+        ],
+        "query": "\"cybersecurity act\" AND \"privacy act\" AND \"security governance\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "privacy act",
+          "cyber incident response"
+        ],
+        "query": "\"cybersecurity act\" AND \"privacy act\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "privacy act",
+          "cyber policy"
+        ],
+        "query": "\"cybersecurity act\" AND \"privacy act\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "incident cost",
+          "economic impact"
+        ],
+        "query": "\"cybersecurity act\" AND \"incident cost\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "incident cost",
+          "cybersecurity planning"
+        ],
+        "query": "\"cybersecurity act\" AND \"incident cost\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "incident cost",
+          "security program management"
+        ],
+        "query": "\"cybersecurity act\" AND \"incident cost\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "incident cost",
+          "security governance"
+        ],
+        "query": "\"cybersecurity act\" AND \"incident cost\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "incident cost",
+          "cyber incident response"
+        ],
+        "query": "\"cybersecurity act\" AND \"incident cost\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "incident cost",
+          "cyber policy"
+        ],
+        "query": "\"cybersecurity act\" AND \"incident cost\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "economic impact",
+          "cybersecurity planning"
+        ],
+        "query": "\"cybersecurity act\" AND \"economic impact\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "economic impact",
+          "security program management"
+        ],
+        "query": "\"cybersecurity act\" AND \"economic impact\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "economic impact",
+          "security governance"
+        ],
+        "query": "\"cybersecurity act\" AND \"economic impact\" AND \"security governance\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "economic impact",
+          "cyber incident response"
+        ],
+        "query": "\"cybersecurity act\" AND \"economic impact\" AND \"cyber incident response\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "economic impact",
+          "cyber policy"
+        ],
+        "query": "\"cybersecurity act\" AND \"economic impact\" AND \"cyber policy\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "cybersecurity planning",
+          "security program management"
+        ],
+        "query": "\"cybersecurity act\" AND \"cybersecurity planning\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "cybersecurity planning",
+          "security governance"
+        ],
+        "query": "\"cybersecurity act\" AND \"cybersecurity planning\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "cybersecurity planning",
+          "cyber incident response"
+        ],
+        "query": "\"cybersecurity act\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "cybersecurity planning",
+          "cyber policy"
+        ],
+        "query": "\"cybersecurity act\" AND \"cybersecurity planning\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "security program management",
+          "security governance"
+        ],
+        "query": "\"cybersecurity act\" AND \"security program management\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "security program management",
+          "cyber incident response"
+        ],
+        "query": "\"cybersecurity act\" AND \"security program management\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "security program management",
+          "cyber policy"
+        ],
+        "query": "\"cybersecurity act\" AND \"security program management\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "security governance",
+          "cyber incident response"
+        ],
+        "query": "\"cybersecurity act\" AND \"security governance\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "security governance",
+          "cyber policy"
+        ],
+        "query": "\"cybersecurity act\" AND \"security governance\" AND \"cyber policy\"",
+        "count": 3
+      },
+      {
+        "keywords": [
+          "cybersecurity act",
+          "cyber incident response",
+          "cyber policy"
+        ],
+        "query": "\"cybersecurity act\" AND \"cyber incident response\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "risk-based prioritization",
+          "privacy act"
+        ],
+        "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"privacy act\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "risk-based prioritization",
+          "incident cost"
+        ],
+        "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "risk-based prioritization",
+          "economic impact"
+        ],
+        "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "risk-based prioritization",
+          "cybersecurity planning"
+        ],
+        "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "risk-based prioritization",
+          "security program management"
+        ],
+        "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "risk-based prioritization",
+          "security governance"
+        ],
+        "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "risk-based prioritization",
+          "cyber incident response"
+        ],
+        "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "risk-based prioritization",
+          "cyber policy"
+        ],
+        "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "privacy act",
+          "incident cost"
+        ],
+        "query": "\"cyber law\" AND \"privacy act\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "privacy act",
+          "economic impact"
+        ],
+        "query": "\"cyber law\" AND \"privacy act\" AND \"economic impact\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "privacy act",
+          "cybersecurity planning"
+        ],
+        "query": "\"cyber law\" AND \"privacy act\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "privacy act",
+          "security program management"
+        ],
+        "query": "\"cyber law\" AND \"privacy act\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "privacy act",
+          "security governance"
+        ],
+        "query": "\"cyber law\" AND \"privacy act\" AND \"security governance\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "privacy act",
+          "cyber incident response"
+        ],
+        "query": "\"cyber law\" AND \"privacy act\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "privacy act",
+          "cyber policy"
+        ],
+        "query": "\"cyber law\" AND \"privacy act\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "incident cost",
+          "economic impact"
+        ],
+        "query": "\"cyber law\" AND \"incident cost\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "incident cost",
+          "cybersecurity planning"
+        ],
+        "query": "\"cyber law\" AND \"incident cost\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "incident cost",
+          "security program management"
+        ],
+        "query": "\"cyber law\" AND \"incident cost\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "incident cost",
+          "security governance"
+        ],
+        "query": "\"cyber law\" AND \"incident cost\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "incident cost",
+          "cyber incident response"
+        ],
+        "query": "\"cyber law\" AND \"incident cost\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "incident cost",
+          "cyber policy"
+        ],
+        "query": "\"cyber law\" AND \"incident cost\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "economic impact",
+          "cybersecurity planning"
+        ],
+        "query": "\"cyber law\" AND \"economic impact\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "economic impact",
+          "security program management"
+        ],
+        "query": "\"cyber law\" AND \"economic impact\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "economic impact",
+          "security governance"
+        ],
+        "query": "\"cyber law\" AND \"economic impact\" AND \"security governance\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "economic impact",
+          "cyber incident response"
+        ],
+        "query": "\"cyber law\" AND \"economic impact\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "economic impact",
+          "cyber policy"
+        ],
+        "query": "\"cyber law\" AND \"economic impact\" AND \"cyber policy\"",
+        "count": 3
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "cybersecurity planning",
+          "security program management"
+        ],
+        "query": "\"cyber law\" AND \"cybersecurity planning\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "cybersecurity planning",
+          "security governance"
+        ],
+        "query": "\"cyber law\" AND \"cybersecurity planning\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "cybersecurity planning",
+          "cyber incident response"
+        ],
+        "query": "\"cyber law\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "cybersecurity planning",
+          "cyber policy"
+        ],
+        "query": "\"cyber law\" AND \"cybersecurity planning\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "security program management",
+          "security governance"
+        ],
+        "query": "\"cyber law\" AND \"security program management\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "security program management",
+          "cyber incident response"
+        ],
+        "query": "\"cyber law\" AND \"security program management\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "security program management",
+          "cyber policy"
+        ],
+        "query": "\"cyber law\" AND \"security program management\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "security governance",
+          "cyber incident response"
+        ],
+        "query": "\"cyber law\" AND \"security governance\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "security governance",
+          "cyber policy"
+        ],
+        "query": "\"cyber law\" AND \"security governance\" AND \"cyber policy\"",
+        "count": 4
+      },
+      {
+        "keywords": [
+          "cyber law",
+          "cyber incident response",
+          "cyber policy"
+        ],
+        "query": "\"cyber law\" AND \"cyber incident response\" AND \"cyber policy\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "privacy act",
+          "incident cost"
+        ],
+        "query": "\"risk-based prioritization\" AND \"privacy act\" AND \"incident cost\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "privacy act",
+          "economic impact"
+        ],
+        "query": "\"risk-based prioritization\" AND \"privacy act\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "privacy act",
+          "cybersecurity planning"
+        ],
+        "query": "\"risk-based prioritization\" AND \"privacy act\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "privacy act",
+          "security program management"
+        ],
+        "query": "\"risk-based prioritization\" AND \"privacy act\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "privacy act",
+          "security governance"
+        ],
+        "query": "\"risk-based prioritization\" AND \"privacy act\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "privacy act",
+          "cyber incident response"
+        ],
+        "query": "\"risk-based prioritization\" AND \"privacy act\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "privacy act",
+          "cyber policy"
+        ],
+        "query": "\"risk-based prioritization\" AND \"privacy act\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "incident cost",
+          "economic impact"
+        ],
+        "query": "\"risk-based prioritization\" AND \"incident cost\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "incident cost",
+          "cybersecurity planning"
+        ],
+        "query": "\"risk-based prioritization\" AND \"incident cost\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "incident cost",
+          "security program management"
+        ],
+        "query": "\"risk-based prioritization\" AND \"incident cost\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "incident cost",
+          "security governance"
+        ],
+        "query": "\"risk-based prioritization\" AND \"incident cost\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "incident cost",
+          "cyber incident response"
+        ],
+        "query": "\"risk-based prioritization\" AND \"incident cost\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "incident cost",
+          "cyber policy"
+        ],
+        "query": "\"risk-based prioritization\" AND \"incident cost\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "economic impact",
+          "cybersecurity planning"
+        ],
+        "query": "\"risk-based prioritization\" AND \"economic impact\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "economic impact",
+          "security program management"
+        ],
+        "query": "\"risk-based prioritization\" AND \"economic impact\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "economic impact",
+          "security governance"
+        ],
+        "query": "\"risk-based prioritization\" AND \"economic impact\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "economic impact",
+          "cyber incident response"
+        ],
+        "query": "\"risk-based prioritization\" AND \"economic impact\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "economic impact",
+          "cyber policy"
+        ],
+        "query": "\"risk-based prioritization\" AND \"economic impact\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "cybersecurity planning",
+          "security program management"
+        ],
+        "query": "\"risk-based prioritization\" AND \"cybersecurity planning\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "cybersecurity planning",
+          "security governance"
+        ],
+        "query": "\"risk-based prioritization\" AND \"cybersecurity planning\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "cybersecurity planning",
+          "cyber incident response"
+        ],
+        "query": "\"risk-based prioritization\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "cybersecurity planning",
+          "cyber policy"
+        ],
+        "query": "\"risk-based prioritization\" AND \"cybersecurity planning\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "security program management",
+          "security governance"
+        ],
+        "query": "\"risk-based prioritization\" AND \"security program management\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "security program management",
+          "cyber incident response"
+        ],
+        "query": "\"risk-based prioritization\" AND \"security program management\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "security program management",
+          "cyber policy"
+        ],
+        "query": "\"risk-based prioritization\" AND \"security program management\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "security governance",
+          "cyber incident response"
+        ],
+        "query": "\"risk-based prioritization\" AND \"security governance\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "security governance",
+          "cyber policy"
+        ],
+        "query": "\"risk-based prioritization\" AND \"security governance\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "risk-based prioritization",
+          "cyber incident response",
+          "cyber policy"
+        ],
+        "query": "\"risk-based prioritization\" AND \"cyber incident response\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "incident cost",
+          "economic impact"
+        ],
+        "query": "\"privacy act\" AND \"incident cost\" AND \"economic impact\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "incident cost",
+          "cybersecurity planning"
+        ],
+        "query": "\"privacy act\" AND \"incident cost\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "incident cost",
+          "security program management"
+        ],
+        "query": "\"privacy act\" AND \"incident cost\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "incident cost",
+          "security governance"
+        ],
+        "query": "\"privacy act\" AND \"incident cost\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "incident cost",
+          "cyber incident response"
+        ],
+        "query": "\"privacy act\" AND \"incident cost\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "incident cost",
+          "cyber policy"
+        ],
+        "query": "\"privacy act\" AND \"incident cost\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "economic impact",
+          "cybersecurity planning"
+        ],
+        "query": "\"privacy act\" AND \"economic impact\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "economic impact",
+          "security program management"
+        ],
+        "query": "\"privacy act\" AND \"economic impact\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "economic impact",
+          "security governance"
+        ],
+        "query": "\"privacy act\" AND \"economic impact\" AND \"security governance\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "economic impact",
+          "cyber incident response"
+        ],
+        "query": "\"privacy act\" AND \"economic impact\" AND \"cyber incident response\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "economic impact",
+          "cyber policy"
+        ],
+        "query": "\"privacy act\" AND \"economic impact\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "cybersecurity planning",
+          "security program management"
+        ],
+        "query": "\"privacy act\" AND \"cybersecurity planning\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "cybersecurity planning",
+          "security governance"
+        ],
+        "query": "\"privacy act\" AND \"cybersecurity planning\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "cybersecurity planning",
+          "cyber incident response"
+        ],
+        "query": "\"privacy act\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "cybersecurity planning",
+          "cyber policy"
+        ],
+        "query": "\"privacy act\" AND \"cybersecurity planning\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "security program management",
+          "security governance"
+        ],
+        "query": "\"privacy act\" AND \"security program management\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "security program management",
+          "cyber incident response"
+        ],
+        "query": "\"privacy act\" AND \"security program management\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "security program management",
+          "cyber policy"
+        ],
+        "query": "\"privacy act\" AND \"security program management\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "security governance",
+          "cyber incident response"
+        ],
+        "query": "\"privacy act\" AND \"security governance\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "security governance",
+          "cyber policy"
+        ],
+        "query": "\"privacy act\" AND \"security governance\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "privacy act",
+          "cyber incident response",
+          "cyber policy"
+        ],
+        "query": "\"privacy act\" AND \"cyber incident response\" AND \"cyber policy\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "economic impact",
+          "cybersecurity planning"
+        ],
+        "query": "\"incident cost\" AND \"economic impact\" AND \"cybersecurity planning\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "economic impact",
+          "security program management"
+        ],
+        "query": "\"incident cost\" AND \"economic impact\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "economic impact",
+          "security governance"
+        ],
+        "query": "\"incident cost\" AND \"economic impact\" AND \"security governance\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "economic impact",
+          "cyber incident response"
+        ],
+        "query": "\"incident cost\" AND \"economic impact\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "economic impact",
+          "cyber policy"
+        ],
+        "query": "\"incident cost\" AND \"economic impact\" AND \"cyber policy\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "cybersecurity planning",
+          "security program management"
+        ],
+        "query": "\"incident cost\" AND \"cybersecurity planning\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "cybersecurity planning",
+          "security governance"
+        ],
+        "query": "\"incident cost\" AND \"cybersecurity planning\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "cybersecurity planning",
+          "cyber incident response"
+        ],
+        "query": "\"incident cost\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "cybersecurity planning",
+          "cyber policy"
+        ],
+        "query": "\"incident cost\" AND \"cybersecurity planning\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "security program management",
+          "security governance"
+        ],
+        "query": "\"incident cost\" AND \"security program management\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "security program management",
+          "cyber incident response"
+        ],
+        "query": "\"incident cost\" AND \"security program management\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "security program management",
+          "cyber policy"
+        ],
+        "query": "\"incident cost\" AND \"security program management\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "security governance",
+          "cyber incident response"
+        ],
+        "query": "\"incident cost\" AND \"security governance\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "security governance",
+          "cyber policy"
+        ],
+        "query": "\"incident cost\" AND \"security governance\" AND \"cyber policy\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "incident cost",
+          "cyber incident response",
+          "cyber policy"
+        ],
+        "query": "\"incident cost\" AND \"cyber incident response\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "economic impact",
+          "cybersecurity planning",
+          "security program management"
+        ],
+        "query": "\"economic impact\" AND \"cybersecurity planning\" AND \"security program management\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "economic impact",
+          "cybersecurity planning",
+          "security governance"
+        ],
+        "query": "\"economic impact\" AND \"cybersecurity planning\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "economic impact",
+          "cybersecurity planning",
+          "cyber incident response"
+        ],
+        "query": "\"economic impact\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "economic impact",
+          "cybersecurity planning",
+          "cyber policy"
+        ],
+        "query": "\"economic impact\" AND \"cybersecurity planning\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "economic impact",
+          "security program management",
+          "security governance"
+        ],
+        "query": "\"economic impact\" AND \"security program management\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "economic impact",
+          "security program management",
+          "cyber incident response"
+        ],
+        "query": "\"economic impact\" AND \"security program management\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "economic impact",
+          "security program management",
+          "cyber policy"
+        ],
+        "query": "\"economic impact\" AND \"security program management\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "economic impact",
+          "security governance",
+          "cyber incident response"
+        ],
+        "query": "\"economic impact\" AND \"security governance\" AND \"cyber incident response\"",
+        "count": 3
+      },
+      {
+        "keywords": [
+          "economic impact",
+          "security governance",
+          "cyber policy"
+        ],
+        "query": "\"economic impact\" AND \"security governance\" AND \"cyber policy\"",
+        "count": 4
+      },
+      {
+        "keywords": [
+          "economic impact",
+          "cyber incident response",
+          "cyber policy"
+        ],
+        "query": "\"economic impact\" AND \"cyber incident response\" AND \"cyber policy\"",
+        "count": 2
+      },
+      {
+        "keywords": [
+          "cybersecurity planning",
+          "security program management",
+          "security governance"
+        ],
+        "query": "\"cybersecurity planning\" AND \"security program management\" AND \"security governance\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity planning",
+          "security program management",
+          "cyber incident response"
+        ],
+        "query": "\"cybersecurity planning\" AND \"security program management\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity planning",
+          "security program management",
+          "cyber policy"
+        ],
+        "query": "\"cybersecurity planning\" AND \"security program management\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity planning",
+          "security governance",
+          "cyber incident response"
+        ],
+        "query": "\"cybersecurity planning\" AND \"security governance\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "cybersecurity planning",
+          "security governance",
+          "cyber policy"
+        ],
+        "query": "\"cybersecurity planning\" AND \"security governance\" AND \"cyber policy\"",
+        "count": 1
+      },
+      {
+        "keywords": [
+          "cybersecurity planning",
+          "cyber incident response",
+          "cyber policy"
+        ],
+        "query": "\"cybersecurity planning\" AND \"cyber incident response\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "security program management",
+          "security governance",
+          "cyber incident response"
+        ],
+        "query": "\"security program management\" AND \"security governance\" AND \"cyber incident response\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "security program management",
+          "security governance",
+          "cyber policy"
+        ],
+        "query": "\"security program management\" AND \"security governance\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "security program management",
+          "cyber incident response",
+          "cyber policy"
+        ],
+        "query": "\"security program management\" AND \"cyber incident response\" AND \"cyber policy\"",
+        "count": 0
+      },
+      {
+        "keywords": [
+          "security governance",
+          "cyber incident response",
+          "cyber policy"
+        ],
+        "query": "\"security governance\" AND \"cyber incident response\" AND \"cyber policy\"",
+        "count": 4
+      }
+    ],
+    "total": 426
+  }
 }
