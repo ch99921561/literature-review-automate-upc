@@ -26,7 +26,7 @@ export SCOPUS_API_KEY="tu_api_key_aqui"
 
 ### Modo Sencillo (solo conteo)
 
-Cuenta publicaciones para múltiples términos de búsqueda independientes.
+Cuenta publicaciones usando la configuración del archivo `scopus_input.json`.
 
 ```powershell
 python scopus_api.py --sencilla
@@ -34,12 +34,29 @@ python scopus_api.py --sencilla
 python scopus_api.py -s
 ```
 
-**Ejemplo de entrada:**
-```
-Términos de búsqueda: machine learning, deep learning, neural networks
+**Configuración en `scopus_input.json`:**
+```json
+{
+  "keywords": [
+    "CSIRT",
+    "SOC",
+    "Security Operations Center",
+    "cybersecurity act"
+  ],
+  "doc_types": ["ar", "cp"],
+  "subject_areas": ["COMP", "ENGI"],
+  "year_from": 2020,
+  "year_to": 2025
+}
 ```
 
-Cada término se busca de forma independiente y muestra el conteo total. Los resultados se guardan en `scopus_counts.json`.
+El modo sencillo:
+1. **Conteo individual**: Cuenta publicaciones por cada keyword
+2. **Combinaciones de 3**: Genera todas las combinaciones posibles de 3 keywords (ternas) y cuenta las publicaciones que coinciden con los 3 términos
+3. **Top 30**: Muestra las 30 combinaciones con más resultados en formato tabla
+4. **Log con timestamp**: Guarda todo el output en `logs/scopus_sencilla_YYYYMMDD_HHMMSS.log`
+
+Los resultados se guardan en `scopus_counts.json`.
 
 ### Modo Extendido (resultados detallados)
 
@@ -105,8 +122,9 @@ Te preguntará qué modo deseas usar.
 
 ## Archivos de salida
 
-- `scopus_counts.json` - Resultados del modo sencillo (conteos)
+- `scopus_counts.json` - Resultados del modo sencillo (conteos individuales y combinaciones)
 - `scopus_results.json` - Resultados del modo extendido (datos completos)
+- `logs/scopus_*.log` - Archivos de log con timestamp de cada ejecución
 
 ## Límites de la API
 
@@ -134,11 +152,82 @@ machine learning, deep learning, artificial intelligence, neural networks
 
 ```
 literature-review-automate-upc/
-├── scopus_api.py        # Script principal
-├── scopus_counts.json   # Salida modo sencillo
-├── scopus_results.json  # Salida modo extendido
-└── README.md            # Este archivo
+├── scopus_api.py           # Script principal
+├── scopus_input.json       # Configuración de entrada (keywords, filtros)
+├── scopus_counts.json      # Salida modo sencillo (conteos individuales y combinaciones)
+├── scopus_results.json     # Salida modo extendido
+├── README.md               # Este archivo
+├── docs/
+│   └── sequence_diagram.txt  # Diagrama de secuencia (sequencediagram.org)
+└── logs/
+    └── scopus_sencilla_YYYYMMDD_HHMMSS.log  # Logs con timestamp
 ```
+
+## Diagrama de Secuencia
+
+El archivo `docs/sequence_diagram.txt` contiene el diagrama de secuencia del modo sencillo.
+Para visualizarlo, copia el contenido en: https://sequencediagram.org/
+
+```
+┌─────────┐     ┌────────────┐     ┌─────────────┐     ┌────────────┐
+│ Usuario │     │ Script     │     │ Scopus API  │     │ Archivos   │
+└────┬────┘     └─────┬──────┘     └──────┬──────┘     └─────┬──────┘
+     │                │                    │                  │
+     │ --sencilla     │                    │                  │
+     │───────────────>│                    │                  │
+     │                │                    │                  │
+     │                │ Leer config        │                  │
+     │                │───────────────────────────────────────>│
+     │                │                    │                  │
+     │                │ Por cada keyword   │                  │
+     │                │───────────────────>│                  │
+     │                │    totalResults    │                  │
+     │                │<───────────────────│                  │
+     │                │                    │                  │
+     │                │ Por cada terna     │                  │
+     │                │───────────────────>│                  │
+     │                │    totalResults    │                  │
+     │                │<───────────────────│                  │
+     │                │                    │                  │
+     │                │ Guardar resultados │                  │
+     │                │───────────────────────────────────────>│
+     │                │                    │                  │
+     │   Resumen      │                    │                  │
+     │<───────────────│                    │                  │
+     │                │                    │                  │
+```
+
+## Archivo de entrada (scopus_input.json)
+
+```json
+{
+  "keywords": [
+    "CSIRT",
+    "SOC",
+    "Security Operations Center",
+    "cybersecurity act",
+    "risk-based prioritization",
+    "SOC service catalog",
+    "privacy act",
+    "incident cost",
+    "SOC operating model",
+    "breach notification act",
+    "economic impact"
+  ],
+  "doc_types": [],
+  "subject_areas": [],
+  "year_from": null,
+  "year_to": null
+}
+```
+
+| Campo | Descripción | Ejemplo |
+|-------|-------------|---------|
+| `keywords` | Lista de términos a buscar | `["SOC", "CSIRT"]` |
+| `doc_types` | Tipos de documento (vacío = todos) | `["ar", "cp"]` |
+| `subject_areas` | Áreas temáticas (vacío = todas) | `["COMP", "ENGI"]` |
+| `year_from` | Año mínimo (null = sin límite) | `2020` |
+| `year_to` | Año máximo (null = sin límite) | `2025` |
 
 ## Documentación adicional
 

@@ -1,0 +1,47 @@
+title Scopus API Client - Modo Sencillo
+
+participant Usuario
+participant "scopus_api.py" as Script
+participant "scopus_input.json" as InputJSON
+participant "Elsevier API" as ScopusAPI
+participant "logs/" as LogFile
+participant "scopus_counts.json" as OutputJSON
+
+Usuario->Script: python scopus_api.py --sencilla
+
+Script->Script: init_log_file("sencilla")
+Script->LogFile: Crear logs/scopus_sencilla_YYYYMMDD_HHMMSS.log
+
+Script->InputJSON: Leer configuración
+InputJSON-->Script: keywords, doc_types, subject_areas, years
+
+note over Script: PARTE 1: Conteo Individual
+
+loop Para cada keyword
+    Script->Script: build_full_query(keyword, filtros)
+    note right of Script: Query: "keyword" + filtros
+    Script->ScopusAPI: GET /search/scopus?query=...&count=1
+    ScopusAPI-->Script: { totalResults: N }
+    Script->LogFile: Registrar resultado
+end
+
+note over Script: PARTE 2: Combinaciones de 3
+
+Script->Script: itertools.combinations(keywords, 3)
+note right of Script: Genera C(n,3) combinaciones
+
+loop Para cada terna (k1, k2, k3)
+    Script->Script: build_full_query("k1" AND "k2" AND "k3", filtros)
+    note right of Script: Query: "k1" AND "k2" AND "k3"
+    Script->ScopusAPI: GET /search/scopus?query=...&count=1
+    ScopusAPI-->Script: { totalResults: N }
+    Script->LogFile: Registrar resultado
+end
+
+Script->Script: Ordenar por resultados DESC
+Script->LogFile: Escribir TOP 30
+
+Script->OutputJSON: Guardar resultados completos
+Script->LogFile: Cerrar archivo de log
+
+Script-->Usuario: Mostrar resumen final
