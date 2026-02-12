@@ -1,97 +1,138 @@
-# Scopus API Client
+# Literature Review Automation Tool
 
-Cliente Python para buscar publicaciones académicas usando la API oficial de Elsevier/Scopus.
+Herramienta unificada para automatizar búsquedas en bases de datos académicas:
+- **Scopus** (API de Elsevier)
+- **IEEE Xplore** (API de IEEE)
+
+## Arquitectura
+
+El proyecto utiliza un diseño orientado a objetos con las siguientes clases principales:
+
+```
+BaseAPIClient (ABC)          # Clase base abstracta
+├── ScopusAPIClient          # Cliente específico Scopus
+└── IEEEAPIClient            # Cliente específico IEEE
+
+SearchEngine                 # Coordina las búsquedas
+InputConfig                  # Configuración unificada
+Logger                       # Manejo de logs
+HTTPClient                   # Cliente HTTP genérico
+```
 
 ## Requisitos
 
 - Python 3.10+
-- API Key de Elsevier (obtener en https://dev.elsevier.com/)
+- API Key de Elsevier (https://dev.elsevier.com/)
+- API Key de IEEE (https://developer.ieee.org/member/register)
 
 ## Configuración
 
-1. Obtén tu API Key en https://dev.elsevier.com/
-2. Configura la variable de entorno:
+### 1. Configurar variables de entorno
 
 ```powershell
 # PowerShell
-$Env:SCOPUS_API_KEY = "tu_api_key_aqui"
+$Env:SCOPUS_API_KEY = "tu_api_key_scopus"
+$Env:IEEE_API_KEY = "tu_api_key_ieee"
 ```
 
 ```bash
 # Bash/Linux
-export SCOPUS_API_KEY="tu_api_key_aqui"
+export SCOPUS_API_KEY="tu_api_key_scopus"
+export IEEE_API_KEY="tu_api_key_ieee"
 ```
 
-## Uso
+### 2. Editar archivo de configuración
 
-### Modo Sencillo (solo conteo)
+El archivo `input.json` contiene la configuración unificada:
 
-Cuenta publicaciones usando la configuración del archivo `scopus_input.json`.
-
-```powershell
-python scopus_api.py --sencilla
-# o
-python scopus_api.py -s
-```
-
-**Configuración en `scopus_input.json`:**
 ```json
 {
   "keywords": [
     "CSIRT",
-    "SOC",
-    "Security Operations Center",
-    "cybersecurity act"
+    "risk management",
+    "Security Operations Center"
   ],
-  "doc_types": ["ar", "cp"],
-  "subject_areas": ["COMP", "ENGI"],
   "year_from": 2020,
-  "year_to": 2025
+  "year_to": 2025,
+  "scopus": {
+    "doc_types": ["ar", "re", "cp"],
+    "subject_areas": ["COMP", "ENGI"]
+  },
+  "ieee": {
+    "content_types": ["Journals", "Conferences"]
+  }
 }
 ```
 
-El modo sencillo:
-1. **Conteo individual**: Cuenta publicaciones por cada keyword
-2. **Combinaciones de 3**: Genera todas las combinaciones posibles de 3 keywords (ternas) y cuenta las publicaciones que coinciden con los 3 términos
-3. **Top 30**: Muestra las 30 combinaciones con más resultados en formato tabla
-4. **Log con timestamp**: Guarda todo el output en `logs/scopus_sencilla_YYYYMMDD_HHMMSS.log`
+## Uso
 
-Los resultados se guardan en `scopus_counts.json`.
+### Modo Sencillo (conteo)
+
+```powershell
+# Ejecutar ambas APIs
+python main.py --sencilla
+
+# Solo Scopus
+python main.py --sencilla --scopus
+
+# Solo IEEE
+python main.py --sencilla --ieee
+```
+
+**Funcionalidades:**
+1. Conteo individual por keyword
+2. Combinaciones de 3 keywords (ternas)
+3. TOP 30 combinaciones con más resultados
+4. Log con timestamp
 
 ### Modo Extendido (resultados detallados)
 
-Búsqueda detallada con información completa de cada publicación.
-
 ```powershell
-python scopus_api.py --extendida
-# o
-python scopus_api.py -e
+python main.py --extendida
 ```
 
-Opciones dentro del modo extendido:
-- **Búsqueda simple**: hasta 25 resultados
-- **Paginación automática**: hasta 5000 resultados
+**Funcionalidades:**
+1. Búsqueda simple o con paginación
+2. Resultados completos con metadatos
+3. Exportación a JSON
 
-Los resultados se guardan en `scopus_results.json`.
-
-### Modo interactivo
+### Modo Interactivo
 
 ```powershell
-python scopus_api.py
+python main.py
 ```
 
-Te preguntará qué modo deseas usar.
+## Estructura del Proyecto
 
-## Filtros disponibles
+```
+literature-review-automate-upc/
+├── main.py                 # Script principal unificado
+├── input.json              # Configuración de entrada unificada
+├── scopus_counts.json      # Salida modo sencillo Scopus
+├── scopus_results.json     # Salida modo extendido Scopus
+├── ieee_counts.json        # Salida modo sencillo IEEE
+├── ieee_results.json       # Salida modo extendido IEEE
+├── README.md               # Este archivo
+├── docs/
+│   ├── sequence_diagram.txt      # Diagrama Scopus
+│   └── ieee_sequence_diagram.txt # Diagrama IEEE
+└── logs/
+    ├── scopus_sencilla_*.log     # Logs Scopus
+    └── ieee_sencilla_*.log       # Logs IEEE
+```
 
-| Filtro | Descripción | Ejemplo |
-|--------|-------------|---------|
-| Año desde | Año mínimo de publicación | 2020 |
-| Año hasta | Año máximo de publicación | 2025 |
-| Tipos de documento | Filtrar por tipo | ar,cp,ch |
-| Áreas temáticas | Filtrar por área | COMP,MEDI |
+## Archivo de Entrada (input.json)
 
-### Tipos de documento
+| Campo | Descripción | Ejemplo |
+|-------|-------------|---------|
+| `keywords` | Lista de términos a buscar | `["CSIRT", "SOC"]` |
+| `year_from` | Año mínimo (null = sin límite) | `2020` |
+| `year_to` | Año máximo (null = sin límite) | `2025` |
+| `scopus.doc_types` | Tipos de documento Scopus | `["ar", "cp"]` |
+| `scopus.subject_areas` | Áreas temáticas Scopus | `["COMP"]` |
+| `ieee.content_types` | Tipos de contenido IEEE | `["Journals"]` |
+
+### Tipos de documento Scopus
 
 | Código | Tipo |
 |--------|------|
@@ -100,12 +141,8 @@ Te preguntará qué modo deseas usar.
 | `cp` | Conference Paper |
 | `ch` | Book Chapter |
 | `bk` | Book |
-| `ed` | Editorial |
-| `le` | Letter |
-| `no` | Note |
-| `sh` | Short Survey |
 
-### Áreas temáticas
+### Áreas temáticas Scopus
 
 | Código | Área |
 |--------|------|
@@ -114,79 +151,44 @@ Te preguntará qué modo deseas usar.
 | `ENGI` | Engineering |
 | `SOCI` | Social Sciences |
 | `BUSI` | Business |
-| `MATH` | Mathematics |
-| `PHYS` | Physics |
-| `CHEM` | Chemistry |
-| `BIOC` | Biochemistry |
-| `ARTS` | Arts and Humanities |
 
-## Archivos de salida
+### Tipos de contenido IEEE (case sensitive)
 
-- `scopus_counts.json` - Resultados del modo sencillo (conteos individuales y combinaciones)
-- `scopus_results.json` - Resultados del modo extendido (datos completos)
-- `logs/scopus_*.log` - Archivos de log con timestamp de cada ejecución
+| Tipo |
+|------|
+| `Books` |
+| `Conferences` |
+| `Courses` |
+| `Early Access` |
+| `Journals` |
+| `Magazines` |
+| `Standards` |
 
-## Límites de la API
+## Límites de las APIs
 
-| Límite | Valor |
-|--------|-------|
-| Resultados por request | 25 máximo |
-| Total por búsqueda | 5000 máximo |
-| Rate limit | ~2-9 req/seg |
-
-## Ejemplos de búsqueda
-
-### Búsqueda combinada (modo extendido)
-```
-machine learning AND healthcare
-"systematic review" AND automation
-TITLE(artificial intelligence) AND PUBYEAR > 2020
-```
-
-### Términos independientes (modo sencillo)
-```
-machine learning, deep learning, artificial intelligence, neural networks
-```
-
-## Estructura del proyecto
-
-```
-literature-review-automate-upc/
-├── scopus_api.py           # Script principal
-├── scopus_input.json       # Configuración de entrada (keywords, filtros)
-├── scopus_counts.json      # Salida modo sencillo (conteos individuales y combinaciones)
-├── scopus_results.json     # Salida modo extendido
-├── README.md               # Este archivo
-├── docs/
-│   └── sequence_diagram.txt  # Diagrama de secuencia (sequencediagram.org)
-└── logs/
-    └── scopus_sencilla_YYYYMMDD_HHMMSS.log  # Logs con timestamp
-```
+| API | Max por request | Rate limit |
+|-----|-----------------|------------|
+| Scopus | 25 | ~2-9 req/seg |
+| IEEE | 200 | Según suscripción |
 
 ## Diagrama de Secuencia
 
-El archivo `docs/sequence_diagram.txt` contiene el diagrama de secuencia del modo sencillo.
-Para visualizarlo, copia el contenido en: https://sequencediagram.org/
+Los archivos en `docs/` contienen diagramas de secuencia para visualizar en https://sequencediagram.org/
 
 ```
 ┌─────────┐     ┌────────────┐     ┌─────────────┐     ┌────────────┐
-│ Usuario │     │ Script     │     │ Scopus API  │     │ Archivos   │
+│ Usuario │     │  main.py   │     │  APIs       │     │ Archivos   │
 └────┬────┘     └─────┬──────┘     └──────┬──────┘     └─────┬──────┘
      │                │                    │                  │
      │ --sencilla     │                    │                  │
      │───────────────>│                    │                  │
      │                │                    │                  │
-     │                │ Leer config        │                  │
+     │                │ Leer input.json    │                  │
      │                │───────────────────────────────────────>│
      │                │                    │                  │
-     │                │ Por cada keyword   │                  │
+     │                │ Por cada API       │                  │
      │                │───────────────────>│                  │
-     │                │    totalResults    │                  │
-     │                │<───────────────────│                  │
-     │                │                    │                  │
-     │                │ Por cada terna     │                  │
-     │                │───────────────────>│                  │
-     │                │    totalResults    │                  │
+     │                │   (Scopus/IEEE)    │                  │
      │                │<───────────────────│                  │
      │                │                    │                  │
      │                │ Guardar resultados │                  │
@@ -194,43 +196,25 @@ Para visualizarlo, copia el contenido en: https://sequencediagram.org/
      │                │                    │                  │
      │   Resumen      │                    │                  │
      │<───────────────│                    │                  │
-     │                │                    │                  │
 ```
 
-## Archivo de entrada (scopus_input.json)
+## Documentación de APIs
 
-```json
-{
-  "keywords": [
-    "CSIRT",
-    "SOC",
-    "Security Operations Center",
-    "cybersecurity act",
-    "risk-based prioritization",
-    "SOC service catalog",
-    "privacy act",
-    "incident cost",
-    "SOC operating model",
-    "breach notification act",
-    "economic impact"
-  ],
-  "doc_types": [],
-  "subject_areas": [],
-  "year_from": null,
-  "year_to": null
-}
-```
-
-| Campo | Descripción | Ejemplo |
-|-------|-------------|---------|
-| `keywords` | Lista de términos a buscar | `["SOC", "CSIRT"]` |
-| `doc_types` | Tipos de documento (vacío = todos) | `["ar", "cp"]` |
-| `subject_areas` | Áreas temáticas (vacío = todas) | `["COMP", "ENGI"]` |
-| `year_from` | Año mínimo (null = sin límite) | `2020` |
-| `year_to` | Año máximo (null = sin límite) | `2025` |
-
-## Documentación adicional
-
+### Scopus
 - [Scopus Search API](https://dev.elsevier.com/documentation/SCOPUSSearchAPI.wadl)
-- [Scopus Search Tips](https://dev.elsevier.com/sc_search_tips.html)
-- [API Key Registration](https://dev.elsevier.com/)
+- [Search Tips](https://dev.elsevier.com/sc_search_tips.html)
+
+### IEEE Xplore
+- [IEEE API Documentation](https://developer.ieee.org/docs)
+- [Search Parameters](https://developer.ieee.org/docs/read/Metadata_API_details)
+- [Boolean Operators](https://developer.ieee.org/docs/read/metadata_api_details/Leveraging_Boolean_Logic)
+
+## Archivos Legacy
+
+Los siguientes archivos son versiones anteriores (no unificadas):
+- `scopus_api.py` - Cliente Scopus independiente
+- `ieee_api.py` - Cliente IEEE independiente
+- `scopus_input.json` - Input anterior Scopus
+- `ieee_input.json` - Input anterior IEEE
+
+Se recomienda usar `main.py` con `input.json` para nuevas ejecuciones.

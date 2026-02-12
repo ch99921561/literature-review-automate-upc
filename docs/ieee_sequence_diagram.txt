@@ -1,0 +1,52 @@
+title IEEE Xplore API - Modo Sencillo
+
+participant Usuario
+participant "ieee_api.py" as Script
+participant "IEEE API" as IEEE
+participant "Archivos" as Files
+
+note over Usuario,Files: INICIALIZACIÓN
+
+Usuario->Script: python ieee_api.py --sencilla
+activate Script
+
+Script->Files: Leer ieee_input.json
+Files-->Script: keywords, content_types, start_year, end_year
+
+Script->Files: Crear logs/ieee_sencilla_YYYYMMDD_HHMMSS.log
+Files-->Script: log_file_handle
+
+note over Usuario,Files: CONTEO INDIVIDUAL POR KEYWORD
+
+loop Para cada keyword
+    Script->IEEE: GET /api/v1/search/articles?querytext="keyword"&apikey=...&max_records=1
+    IEEE-->Script: { total_records: N }
+    Script->Script: Acumular resultado
+    Script->Files: Escribir en log
+end
+
+note over Usuario,Files: COMBINACIONES DE 3 KEYWORDS (TERNAS)
+
+Script->Script: Generar C(n,3) combinaciones
+
+loop Para cada terna [kw1, kw2, kw3]
+    Script->IEEE: GET /api/v1/search/articles?querytext="kw1" AND "kw2" AND "kw3"&apikey=...&max_records=1
+    IEEE-->Script: { total_records: N }
+    Script->Script: Acumular resultado
+    Script->Files: Escribir en log
+end
+
+note over Usuario,Files: FINALIZACIÓN
+
+Script->Script: Ordenar combinaciones por count DESC
+Script->Script: Generar TOP 30
+
+Script->Files: Guardar ieee_counts.json
+Files-->Script: OK
+
+Script->Files: Cerrar archivo log
+Files-->Script: OK
+
+Script-->Usuario: Resumen final\n- Keywords analizados\n- Total individual\n- Combinaciones\n- Archivos generados
+
+deactivate Script
