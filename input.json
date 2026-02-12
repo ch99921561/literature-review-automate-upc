@@ -1,0 +1,27 @@
+{
+  "keywords": [
+    "CSIRT",
+    "risk management",
+    "Security Operations Center",
+    "cybersecurity act",
+    "cyber law",
+    "risk-based prioritization",
+    "privacy act",
+    "incident cost",
+    "economic impact",
+    "cybersecurity planning",
+    "security program management",
+    "security governance",
+    "cyber incident response",
+    "cyber policy"
+  ],
+  "year_from": 2020,
+  "year_to": 2025,
+  "scopus": {
+    "doc_types": ["ar", "re", "cp", "bk"],
+    "subject_areas": []
+  },
+  "ieee": {
+    "content_types": []
+  }
+}

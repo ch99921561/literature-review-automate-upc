@@ -1,7 +1,8 @@
 {
+  "api": "scopus",
   "mode": "sencilla",
-  "timestamp": "2026-01-27 04:50:05",
-  "input_file": "scopus_input.json",
+  "timestamp": "2026-02-12 01:51:57",
+  "input_file": "input.json",
   "filters": {
     "year_from": 2020,
     "year_to": 2025,
@@ -11,82 +12,96 @@
       "cp",
       "bk"
     ],
-    "subject_areas": null
+    "subject_areas": []
   },
   "individual_results": {
     "keywords": [
       {
         "keyword": "CSIRT",
         "query": "\"CSIRT\"",
-        "count": 213
+        "count": 214,
+        "error": false
       },
       {
         "keyword": "risk management",
         "query": "\"risk management\"",
-        "count": 331343
+        "count": 331752,
+        "error": false
       },
       {
         "keyword": "Security Operations Center",
         "query": "\"Security Operations Center\"",
-        "count": 1306
+        "count": 1314,
+        "error": false
       },
       {
         "keyword": "cybersecurity act",
         "query": "\"cybersecurity act\"",
-        "count": 374
+        "count": 377,
+        "error": false
       },
       {
         "keyword": "cyber law",
         "query": "\"cyber law\"",
-        "count": 914
+        "count": 922,
+        "error": false
       },
       {
         "keyword": "risk-based prioritization",
         "query": "\"risk-based prioritization\"",
-        "count": 818
+        "count": 818,
+        "error": false
       },
       {
         "keyword": "privacy act",
         "query": "\"privacy act\"",
-        "count": 2876
+        "count": 2893,
+        "error": false
       },
       {
         "keyword": "incident cost",
         "query": "\"incident cost\"",
-        "count": 91
+        "count": 91,
+        "error": false
       },
       {
         "keyword": "economic impact",
         "query": "\"economic impact\"",
-        "count": 172008
+        "count": 172151,
+        "error": false
       },
       {
         "keyword": "cybersecurity planning",
         "query": "\"cybersecurity planning\"",
-        "count": 84
+        "count": 85,
+        "error": false
       },
       {
         "keyword": "security program management",
         "query": "\"security program management\"",
-        "count": 14
+        "count": 14,
+        "error": false
       },
       {
         "keyword": "security governance",
         "query": "\"security governance\"",
-        "count": 4785
+        "count": 4808,
+        "error": false
       },
       {
         "keyword": "cyber incident response",
         "query": "\"cyber incident response\"",
-        "count": 281
+        "count": 286,
+        "error": false
       },
       {
         "keyword": "cyber policy",
         "query": "\"cyber policy\"",
-        "count": 2111
+        "count": 2124,
+        "error": false
       }
     ],
-    "total": 517218
+    "total": 517849
   },
   "combination_results": {
     "combination_size": 3,
@@ -99,7 +114,8 @@
           "Security Operations Center"
         ],
         "query": "\"CSIRT\" AND \"risk management\" AND \"Security Operations Center\"",
-        "count": 10
+        "count": 10,
+        "error": false
       },
       {
         "keywords": [
@@ -108,7 +124,8 @@
           "cybersecurity act"
         ],
         "query": "\"CSIRT\" AND \"risk management\" AND \"cybersecurity act\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -117,7 +134,8 @@
           "cyber law"
         ],
         "query": "\"CSIRT\" AND \"risk management\" AND \"cyber law\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -126,7 +144,8 @@
           "risk-based prioritization"
         ],
         "query": "\"CSIRT\" AND \"risk management\" AND \"risk-based prioritization\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -135,7 +154,8 @@
           "privacy act"
         ],
         "query": "\"CSIRT\" AND \"risk management\" AND \"privacy act\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -144,7 +164,8 @@
           "incident cost"
         ],
         "query": "\"CSIRT\" AND \"risk management\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -153,7 +174,8 @@
           "economic impact"
         ],
         "query": "\"CSIRT\" AND \"risk management\" AND \"economic impact\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -162,7 +184,8 @@
           "cybersecurity planning"
         ],
         "query": "\"CSIRT\" AND \"risk management\" AND \"cybersecurity planning\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -171,7 +194,8 @@
           "security program management"
         ],
         "query": "\"CSIRT\" AND \"risk management\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -180,7 +204,8 @@
           "security governance"
         ],
         "query": "\"CSIRT\" AND \"risk management\" AND \"security governance\"",
-        "count": 6
+        "count": 6,
+        "error": false
       },
       {
         "keywords": [
@@ -189,7 +214,8 @@
           "cyber incident response"
         ],
         "query": "\"CSIRT\" AND \"risk management\" AND \"cyber incident response\"",
-        "count": 3
+        "count": 3,
+        "error": false
       },
       {
         "keywords": [
@@ -198,7 +224,8 @@
           "cyber policy"
         ],
         "query": "\"CSIRT\" AND \"risk management\" AND \"cyber policy\"",
-        "count": 3
+        "count": 3,
+        "error": false
       },
       {
         "keywords": [
@@ -207,7 +234,8 @@
           "cybersecurity act"
         ],
         "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"cybersecurity act\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -216,7 +244,8 @@
           "cyber law"
         ],
         "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"cyber law\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -225,7 +254,8 @@
           "risk-based prioritization"
         ],
         "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"risk-based prioritization\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -234,7 +264,8 @@
           "privacy act"
         ],
         "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"privacy act\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -243,7 +274,8 @@
           "incident cost"
         ],
         "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -252,7 +284,8 @@
           "economic impact"
         ],
         "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -261,7 +294,8 @@
           "cybersecurity planning"
         ],
         "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -270,7 +304,8 @@
           "security program management"
         ],
         "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -279,7 +314,8 @@
           "security governance"
         ],
         "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"security governance\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -288,7 +324,8 @@
           "cyber incident response"
         ],
         "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"cyber incident response\"",
-        "count": 6
+        "count": 6,
+        "error": false
       },
       {
         "keywords": [
@@ -297,7 +334,8 @@
           "cyber policy"
         ],
         "query": "\"CSIRT\" AND \"Security Operations Center\" AND \"cyber policy\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -306,7 +344,8 @@
           "cyber law"
         ],
         "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"cyber law\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -315,7 +354,8 @@
           "risk-based prioritization"
         ],
         "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"risk-based prioritization\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -324,7 +364,8 @@
           "privacy act"
         ],
         "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"privacy act\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -333,7 +374,8 @@
           "incident cost"
         ],
         "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -342,7 +384,8 @@
           "economic impact"
         ],
         "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"economic impact\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -351,7 +394,8 @@
           "cybersecurity planning"
         ],
         "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -360,7 +404,8 @@
           "security program management"
         ],
         "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -369,7 +414,8 @@
           "security governance"
         ],
         "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"security governance\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -378,7 +424,8 @@
           "cyber incident response"
         ],
         "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -387,7 +434,8 @@
           "cyber policy"
         ],
         "query": "\"CSIRT\" AND \"cybersecurity act\" AND \"cyber policy\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -396,7 +444,8 @@
           "risk-based prioritization"
         ],
         "query": "\"CSIRT\" AND \"cyber law\" AND \"risk-based prioritization\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -405,7 +454,8 @@
           "privacy act"
         ],
         "query": "\"CSIRT\" AND \"cyber law\" AND \"privacy act\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -414,7 +464,8 @@
           "incident cost"
         ],
         "query": "\"CSIRT\" AND \"cyber law\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -423,7 +474,8 @@
           "economic impact"
         ],
         "query": "\"CSIRT\" AND \"cyber law\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -432,7 +484,8 @@
           "cybersecurity planning"
         ],
         "query": "\"CSIRT\" AND \"cyber law\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -441,7 +494,8 @@
           "security program management"
         ],
         "query": "\"CSIRT\" AND \"cyber law\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -450,7 +504,8 @@
           "security governance"
         ],
         "query": "\"CSIRT\" AND \"cyber law\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -459,7 +514,8 @@
           "cyber incident response"
         ],
         "query": "\"CSIRT\" AND \"cyber law\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -468,7 +524,8 @@
           "cyber policy"
         ],
         "query": "\"CSIRT\" AND \"cyber law\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -477,7 +534,8 @@
           "privacy act"
         ],
         "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"privacy act\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -486,7 +544,8 @@
           "incident cost"
         ],
         "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -495,7 +554,8 @@
           "economic impact"
         ],
         "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -504,7 +564,8 @@
           "cybersecurity planning"
         ],
         "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -513,7 +574,8 @@
           "security program management"
         ],
         "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -522,7 +584,8 @@
           "security governance"
         ],
         "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -531,7 +594,8 @@
           "cyber incident response"
         ],
         "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -540,7 +604,8 @@
           "cyber policy"
         ],
         "query": "\"CSIRT\" AND \"risk-based prioritization\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -549,7 +614,8 @@
           "incident cost"
         ],
         "query": "\"CSIRT\" AND \"privacy act\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -558,7 +624,8 @@
           "economic impact"
         ],
         "query": "\"CSIRT\" AND \"privacy act\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -567,7 +634,8 @@
           "cybersecurity planning"
         ],
         "query": "\"CSIRT\" AND \"privacy act\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -576,7 +644,8 @@
           "security program management"
         ],
         "query": "\"CSIRT\" AND \"privacy act\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -585,7 +654,8 @@
           "security governance"
         ],
         "query": "\"CSIRT\" AND \"privacy act\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -594,7 +664,8 @@
           "cyber incident response"
         ],
         "query": "\"CSIRT\" AND \"privacy act\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -603,7 +674,8 @@
           "cyber policy"
         ],
         "query": "\"CSIRT\" AND \"privacy act\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -612,7 +684,8 @@
           "economic impact"
         ],
         "query": "\"CSIRT\" AND \"incident cost\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -621,7 +694,8 @@
           "cybersecurity planning"
         ],
         "query": "\"CSIRT\" AND \"incident cost\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -630,7 +704,8 @@
           "security program management"
         ],
         "query": "\"CSIRT\" AND \"incident cost\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -639,7 +714,8 @@
           "security governance"
         ],
         "query": "\"CSIRT\" AND \"incident cost\" AND \"security governance\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -648,7 +724,8 @@
           "cyber incident response"
         ],
         "query": "\"CSIRT\" AND \"incident cost\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -657,7 +734,8 @@
           "cyber policy"
         ],
         "query": "\"CSIRT\" AND \"incident cost\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -666,7 +744,8 @@
           "cybersecurity planning"
         ],
         "query": "\"CSIRT\" AND \"economic impact\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -675,7 +754,8 @@
           "security program management"
         ],
         "query": "\"CSIRT\" AND \"economic impact\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -684,7 +764,8 @@
           "security governance"
         ],
         "query": "\"CSIRT\" AND \"economic impact\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -693,7 +774,8 @@
           "cyber incident response"
         ],
         "query": "\"CSIRT\" AND \"economic impact\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -702,7 +784,8 @@
           "cyber policy"
         ],
         "query": "\"CSIRT\" AND \"economic impact\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -711,7 +794,8 @@
           "security program management"
         ],
         "query": "\"CSIRT\" AND \"cybersecurity planning\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -720,7 +804,8 @@
           "security governance"
         ],
         "query": "\"CSIRT\" AND \"cybersecurity planning\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -729,7 +814,8 @@
           "cyber incident response"
         ],
         "query": "\"CSIRT\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -738,7 +824,8 @@
           "cyber policy"
         ],
         "query": "\"CSIRT\" AND \"cybersecurity planning\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -747,7 +834,8 @@
           "security governance"
         ],
         "query": "\"CSIRT\" AND \"security program management\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -756,7 +844,8 @@
           "cyber incident response"
         ],
         "query": "\"CSIRT\" AND \"security program management\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -765,7 +854,8 @@
           "cyber policy"
         ],
         "query": "\"CSIRT\" AND \"security program management\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -774,7 +864,8 @@
           "cyber incident response"
         ],
         "query": "\"CSIRT\" AND \"security governance\" AND \"cyber incident response\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -783,7 +874,8 @@
           "cyber policy"
         ],
         "query": "\"CSIRT\" AND \"security governance\" AND \"cyber policy\"",
-        "count": 3
+        "count": 3,
+        "error": false
       },
       {
         "keywords": [
@@ -792,7 +884,8 @@
           "cyber policy"
         ],
         "query": "\"CSIRT\" AND \"cyber incident response\" AND \"cyber policy\"",
-        "count": 3
+        "count": 3,
+        "error": false
       },
       {
         "keywords": [
@@ -801,7 +894,8 @@
           "cybersecurity act"
         ],
         "query": "\"risk management\" AND \"Security Operations Center\" AND \"cybersecurity act\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -810,7 +904,8 @@
           "cyber law"
         ],
         "query": "\"risk management\" AND \"Security Operations Center\" AND \"cyber law\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -819,7 +914,8 @@
           "risk-based prioritization"
         ],
         "query": "\"risk management\" AND \"Security Operations Center\" AND \"risk-based prioritization\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -828,7 +924,8 @@
           "privacy act"
         ],
         "query": "\"risk management\" AND \"Security Operations Center\" AND \"privacy act\"",
-        "count": 6
+        "count": 6,
+        "error": false
       },
       {
         "keywords": [
@@ -837,7 +934,8 @@
           "incident cost"
         ],
         "query": "\"risk management\" AND \"Security Operations Center\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -846,7 +944,8 @@
           "economic impact"
         ],
         "query": "\"risk management\" AND \"Security Operations Center\" AND \"economic impact\"",
-        "count": 13
+        "count": 13,
+        "error": false
       },
       {
         "keywords": [
@@ -855,7 +954,8 @@
           "cybersecurity planning"
         ],
         "query": "\"risk management\" AND \"Security Operations Center\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -864,7 +964,8 @@
           "security program management"
         ],
         "query": "\"risk management\" AND \"Security Operations Center\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -873,7 +974,8 @@
           "security governance"
         ],
         "query": "\"risk management\" AND \"Security Operations Center\" AND \"security governance\"",
-        "count": 12
+        "count": 12,
+        "error": false
       },
       {
         "keywords": [
@@ -882,7 +984,8 @@
           "cyber incident response"
         ],
         "query": "\"risk management\" AND \"Security Operations Center\" AND \"cyber incident response\"",
-        "count": 16
+        "count": 18,
+        "error": false
       },
       {
         "keywords": [
@@ -891,7 +994,8 @@
           "cyber policy"
         ],
         "query": "\"risk management\" AND \"Security Operations Center\" AND \"cyber policy\"",
-        "count": 8
+        "count": 8,
+        "error": false
       },
       {
         "keywords": [
@@ -900,7 +1004,8 @@
           "cyber law"
         ],
         "query": "\"risk management\" AND \"cybersecurity act\" AND \"cyber law\"",
-        "count": 4
+        "count": 4,
+        "error": false
       },
       {
         "keywords": [
@@ -909,7 +1014,8 @@
           "risk-based prioritization"
         ],
         "query": "\"risk management\" AND \"cybersecurity act\" AND \"risk-based prioritization\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -918,7 +1024,8 @@
           "privacy act"
         ],
         "query": "\"risk management\" AND \"cybersecurity act\" AND \"privacy act\"",
-        "count": 6
+        "count": 6,
+        "error": false
       },
       {
         "keywords": [
@@ -927,7 +1034,8 @@
           "incident cost"
         ],
         "query": "\"risk management\" AND \"cybersecurity act\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -936,7 +1044,8 @@
           "economic impact"
         ],
         "query": "\"risk management\" AND \"cybersecurity act\" AND \"economic impact\"",
-        "count": 7
+        "count": 7,
+        "error": false
       },
       {
         "keywords": [
@@ -945,7 +1054,8 @@
           "cybersecurity planning"
         ],
         "query": "\"risk management\" AND \"cybersecurity act\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -954,7 +1064,8 @@
           "security program management"
         ],
         "query": "\"risk management\" AND \"cybersecurity act\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -963,7 +1074,8 @@
           "security governance"
         ],
         "query": "\"risk management\" AND \"cybersecurity act\" AND \"security governance\"",
-        "count": 6
+        "count": 6,
+        "error": false
       },
       {
         "keywords": [
@@ -972,7 +1084,8 @@
           "cyber incident response"
         ],
         "query": "\"risk management\" AND \"cybersecurity act\" AND \"cyber incident response\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -981,7 +1094,8 @@
           "cyber policy"
         ],
         "query": "\"risk management\" AND \"cybersecurity act\" AND \"cyber policy\"",
-        "count": 5
+        "count": 5,
+        "error": false
       },
       {
         "keywords": [
@@ -990,7 +1104,8 @@
           "risk-based prioritization"
         ],
         "query": "\"risk management\" AND \"cyber law\" AND \"risk-based prioritization\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -999,7 +1114,8 @@
           "privacy act"
         ],
         "query": "\"risk management\" AND \"cyber law\" AND \"privacy act\"",
-        "count": 6
+        "count": 6,
+        "error": false
       },
       {
         "keywords": [
@@ -1008,7 +1124,8 @@
           "incident cost"
         ],
         "query": "\"risk management\" AND \"cyber law\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1017,7 +1134,8 @@
           "economic impact"
         ],
         "query": "\"risk management\" AND \"cyber law\" AND \"economic impact\"",
-        "count": 10
+        "count": 11,
+        "error": false
       },
       {
         "keywords": [
@@ -1026,7 +1144,8 @@
           "cybersecurity planning"
         ],
         "query": "\"risk management\" AND \"cyber law\" AND \"cybersecurity planning\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -1035,7 +1154,8 @@
           "security program management"
         ],
         "query": "\"risk management\" AND \"cyber law\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1044,7 +1164,8 @@
           "security governance"
         ],
         "query": "\"risk management\" AND \"cyber law\" AND \"security governance\"",
-        "count": 5
+        "count": 5,
+        "error": false
       },
       {
         "keywords": [
@@ -1053,7 +1174,8 @@
           "cyber incident response"
         ],
         "query": "\"risk management\" AND \"cyber law\" AND \"cyber incident response\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -1062,7 +1184,8 @@
           "cyber policy"
         ],
         "query": "\"risk management\" AND \"cyber law\" AND \"cyber policy\"",
-        "count": 13
+        "count": 14,
+        "error": false
       },
       {
         "keywords": [
@@ -1071,7 +1194,8 @@
           "privacy act"
         ],
         "query": "\"risk management\" AND \"risk-based prioritization\" AND \"privacy act\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1080,7 +1204,8 @@
           "incident cost"
         ],
         "query": "\"risk management\" AND \"risk-based prioritization\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1089,7 +1214,8 @@
           "economic impact"
         ],
         "query": "\"risk management\" AND \"risk-based prioritization\" AND \"economic impact\"",
-        "count": 7
+        "count": 7,
+        "error": false
       },
       {
         "keywords": [
@@ -1098,7 +1224,8 @@
           "cybersecurity planning"
         ],
         "query": "\"risk management\" AND \"risk-based prioritization\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1107,7 +1234,8 @@
           "security program management"
         ],
         "query": "\"risk management\" AND \"risk-based prioritization\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1116,7 +1244,8 @@
           "security governance"
         ],
         "query": "\"risk management\" AND \"risk-based prioritization\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1125,7 +1254,8 @@
           "cyber incident response"
         ],
         "query": "\"risk management\" AND \"risk-based prioritization\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1134,7 +1264,8 @@
           "cyber policy"
         ],
         "query": "\"risk management\" AND \"risk-based prioritization\" AND \"cyber policy\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -1143,7 +1274,8 @@
           "incident cost"
         ],
         "query": "\"risk management\" AND \"privacy act\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1152,7 +1284,8 @@
           "economic impact"
         ],
         "query": "\"risk management\" AND \"privacy act\" AND \"economic impact\"",
-        "count": 17
+        "count": 17,
+        "error": false
       },
       {
         "keywords": [
@@ -1161,7 +1294,8 @@
           "cybersecurity planning"
         ],
         "query": "\"risk management\" AND \"privacy act\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1170,7 +1304,8 @@
           "security program management"
         ],
         "query": "\"risk management\" AND \"privacy act\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1179,7 +1314,8 @@
           "security governance"
         ],
         "query": "\"risk management\" AND \"privacy act\" AND \"security governance\"",
-        "count": 7
+        "count": 7,
+        "error": false
       },
       {
         "keywords": [
@@ -1188,7 +1324,8 @@
           "cyber incident response"
         ],
         "query": "\"risk management\" AND \"privacy act\" AND \"cyber incident response\"",
-        "count": 4
+        "count": 4,
+        "error": false
       },
       {
         "keywords": [
@@ -1197,7 +1334,8 @@
           "cyber policy"
         ],
         "query": "\"risk management\" AND \"privacy act\" AND \"cyber policy\"",
-        "count": 6
+        "count": 6,
+        "error": false
       },
       {
         "keywords": [
@@ -1206,7 +1344,8 @@
           "economic impact"
         ],
         "query": "\"risk management\" AND \"incident cost\" AND \"economic impact\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -1215,7 +1354,8 @@
           "cybersecurity planning"
         ],
         "query": "\"risk management\" AND \"incident cost\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1224,7 +1364,8 @@
           "security program management"
         ],
         "query": "\"risk management\" AND \"incident cost\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1233,7 +1374,8 @@
           "security governance"
         ],
         "query": "\"risk management\" AND \"incident cost\" AND \"security governance\"",
-        "count": 3
+        "count": 3,
+        "error": false
       },
       {
         "keywords": [
@@ -1242,7 +1384,8 @@
           "cyber incident response"
         ],
         "query": "\"risk management\" AND \"incident cost\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1251,7 +1394,8 @@
           "cyber policy"
         ],
         "query": "\"risk management\" AND \"incident cost\" AND \"cyber policy\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -1260,7 +1404,8 @@
           "cybersecurity planning"
         ],
         "query": "\"risk management\" AND \"economic impact\" AND \"cybersecurity planning\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -1269,7 +1414,8 @@
           "security program management"
         ],
         "query": "\"risk management\" AND \"economic impact\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1278,7 +1424,8 @@
           "security governance"
         ],
         "query": "\"risk management\" AND \"economic impact\" AND \"security governance\"",
-        "count": 46
+        "count": 46,
+        "error": false
       },
       {
         "keywords": [
@@ -1287,7 +1434,8 @@
           "cyber incident response"
         ],
         "query": "\"risk management\" AND \"economic impact\" AND \"cyber incident response\"",
-        "count": 7
+        "count": 7,
+        "error": false
       },
       {
         "keywords": [
@@ -1296,7 +1444,8 @@
           "cyber policy"
         ],
         "query": "\"risk management\" AND \"economic impact\" AND \"cyber policy\"",
-        "count": 33
+        "count": 34,
+        "error": false
       },
       {
         "keywords": [
@@ -1305,7 +1454,8 @@
           "security program management"
         ],
         "query": "\"risk management\" AND \"cybersecurity planning\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1314,7 +1464,8 @@
           "security governance"
         ],
         "query": "\"risk management\" AND \"cybersecurity planning\" AND \"security governance\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -1323,7 +1474,8 @@
           "cyber incident response"
         ],
         "query": "\"risk management\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1332,7 +1484,8 @@
           "cyber policy"
         ],
         "query": "\"risk management\" AND \"cybersecurity planning\" AND \"cyber policy\"",
-        "count": 3
+        "count": 3,
+        "error": false
       },
       {
         "keywords": [
@@ -1341,7 +1494,8 @@
           "security governance"
         ],
         "query": "\"risk management\" AND \"security program management\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1350,7 +1504,8 @@
           "cyber incident response"
         ],
         "query": "\"risk management\" AND \"security program management\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1359,7 +1514,8 @@
           "cyber policy"
         ],
         "query": "\"risk management\" AND \"security program management\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1368,7 +1524,8 @@
           "cyber incident response"
         ],
         "query": "\"risk management\" AND \"security governance\" AND \"cyber incident response\"",
-        "count": 7
+        "count": 7,
+        "error": false
       },
       {
         "keywords": [
@@ -1377,7 +1534,8 @@
           "cyber policy"
         ],
         "query": "\"risk management\" AND \"security governance\" AND \"cyber policy\"",
-        "count": 25
+        "count": 26,
+        "error": false
       },
       {
         "keywords": [
@@ -1386,7 +1544,8 @@
           "cyber policy"
         ],
         "query": "\"risk management\" AND \"cyber incident response\" AND \"cyber policy\"",
-        "count": 10
+        "count": 10,
+        "error": false
       },
       {
         "keywords": [
@@ -1395,7 +1554,8 @@
           "cyber law"
         ],
         "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"cyber law\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1404,7 +1564,8 @@
           "risk-based prioritization"
         ],
         "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"risk-based prioritization\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1413,7 +1574,8 @@
           "privacy act"
         ],
         "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"privacy act\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1422,7 +1584,8 @@
           "incident cost"
         ],
         "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1431,7 +1594,8 @@
           "economic impact"
         ],
         "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1440,7 +1604,8 @@
           "cybersecurity planning"
         ],
         "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1449,7 +1614,8 @@
           "security program management"
         ],
         "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1458,7 +1624,8 @@
           "security governance"
         ],
         "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"security governance\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -1467,7 +1634,8 @@
           "cyber incident response"
         ],
         "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1476,7 +1644,8 @@
           "cyber policy"
         ],
         "query": "\"Security Operations Center\" AND \"cybersecurity act\" AND \"cyber policy\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -1485,7 +1654,8 @@
           "risk-based prioritization"
         ],
         "query": "\"Security Operations Center\" AND \"cyber law\" AND \"risk-based prioritization\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1494,7 +1664,8 @@
           "privacy act"
         ],
         "query": "\"Security Operations Center\" AND \"cyber law\" AND \"privacy act\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1503,7 +1674,8 @@
           "incident cost"
         ],
         "query": "\"Security Operations Center\" AND \"cyber law\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1512,7 +1684,8 @@
           "economic impact"
         ],
         "query": "\"Security Operations Center\" AND \"cyber law\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1521,7 +1694,8 @@
           "cybersecurity planning"
         ],
         "query": "\"Security Operations Center\" AND \"cyber law\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1530,7 +1704,8 @@
           "security program management"
         ],
         "query": "\"Security Operations Center\" AND \"cyber law\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1539,7 +1714,8 @@
           "security governance"
         ],
         "query": "\"Security Operations Center\" AND \"cyber law\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1548,7 +1724,8 @@
           "cyber incident response"
         ],
         "query": "\"Security Operations Center\" AND \"cyber law\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1557,7 +1734,8 @@
           "cyber policy"
         ],
         "query": "\"Security Operations Center\" AND \"cyber law\" AND \"cyber policy\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -1566,7 +1744,8 @@
           "privacy act"
         ],
         "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"privacy act\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1575,7 +1754,8 @@
           "incident cost"
         ],
         "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1584,7 +1764,8 @@
           "economic impact"
         ],
         "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1593,7 +1774,8 @@
           "cybersecurity planning"
         ],
         "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1602,7 +1784,8 @@
           "security program management"
         ],
         "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1611,7 +1794,8 @@
           "security governance"
         ],
         "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1620,7 +1804,8 @@
           "cyber incident response"
         ],
         "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1629,7 +1814,8 @@
           "cyber policy"
         ],
         "query": "\"Security Operations Center\" AND \"risk-based prioritization\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1638,7 +1824,8 @@
           "incident cost"
         ],
         "query": "\"Security Operations Center\" AND \"privacy act\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1647,7 +1834,8 @@
           "economic impact"
         ],
         "query": "\"Security Operations Center\" AND \"privacy act\" AND \"economic impact\"",
-        "count": 3
+        "count": 3,
+        "error": false
       },
       {
         "keywords": [
@@ -1656,7 +1844,8 @@
           "cybersecurity planning"
         ],
         "query": "\"Security Operations Center\" AND \"privacy act\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1665,7 +1854,8 @@
           "security program management"
         ],
         "query": "\"Security Operations Center\" AND \"privacy act\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1674,7 +1864,8 @@
           "security governance"
         ],
         "query": "\"Security Operations Center\" AND \"privacy act\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1683,7 +1874,8 @@
           "cyber incident response"
         ],
         "query": "\"Security Operations Center\" AND \"privacy act\" AND \"cyber incident response\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -1692,7 +1884,8 @@
           "cyber policy"
         ],
         "query": "\"Security Operations Center\" AND \"privacy act\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1701,7 +1894,8 @@
           "economic impact"
         ],
         "query": "\"Security Operations Center\" AND \"incident cost\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1710,7 +1904,8 @@
           "cybersecurity planning"
         ],
         "query": "\"Security Operations Center\" AND \"incident cost\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1719,7 +1914,8 @@
           "security program management"
         ],
         "query": "\"Security Operations Center\" AND \"incident cost\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1728,7 +1924,8 @@
           "security governance"
         ],
         "query": "\"Security Operations Center\" AND \"incident cost\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1737,7 +1934,8 @@
           "cyber incident response"
         ],
         "query": "\"Security Operations Center\" AND \"incident cost\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1746,7 +1944,8 @@
           "cyber policy"
         ],
         "query": "\"Security Operations Center\" AND \"incident cost\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1755,7 +1954,8 @@
           "cybersecurity planning"
         ],
         "query": "\"Security Operations Center\" AND \"economic impact\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1764,7 +1964,8 @@
           "security program management"
         ],
         "query": "\"Security Operations Center\" AND \"economic impact\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1773,7 +1974,8 @@
           "security governance"
         ],
         "query": "\"Security Operations Center\" AND \"economic impact\" AND \"security governance\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -1782,7 +1984,8 @@
           "cyber incident response"
         ],
         "query": "\"Security Operations Center\" AND \"economic impact\" AND \"cyber incident response\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -1791,7 +1994,8 @@
           "cyber policy"
         ],
         "query": "\"Security Operations Center\" AND \"economic impact\" AND \"cyber policy\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -1800,7 +2004,8 @@
           "security program management"
         ],
         "query": "\"Security Operations Center\" AND \"cybersecurity planning\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1809,7 +2014,8 @@
           "security governance"
         ],
         "query": "\"Security Operations Center\" AND \"cybersecurity planning\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1818,7 +2024,8 @@
           "cyber incident response"
         ],
         "query": "\"Security Operations Center\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1827,7 +2034,8 @@
           "cyber policy"
         ],
         "query": "\"Security Operations Center\" AND \"cybersecurity planning\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1836,7 +2044,8 @@
           "security governance"
         ],
         "query": "\"Security Operations Center\" AND \"security program management\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1845,7 +2054,8 @@
           "cyber incident response"
         ],
         "query": "\"Security Operations Center\" AND \"security program management\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1854,7 +2064,8 @@
           "cyber policy"
         ],
         "query": "\"Security Operations Center\" AND \"security program management\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1863,7 +2074,8 @@
           "cyber incident response"
         ],
         "query": "\"Security Operations Center\" AND \"security governance\" AND \"cyber incident response\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -1872,7 +2084,8 @@
           "cyber policy"
         ],
         "query": "\"Security Operations Center\" AND \"security governance\" AND \"cyber policy\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -1881,7 +2094,8 @@
           "cyber policy"
         ],
         "query": "\"Security Operations Center\" AND \"cyber incident response\" AND \"cyber policy\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -1890,7 +2104,8 @@
           "risk-based prioritization"
         ],
         "query": "\"cybersecurity act\" AND \"cyber law\" AND \"risk-based prioritization\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1899,7 +2114,8 @@
           "privacy act"
         ],
         "query": "\"cybersecurity act\" AND \"cyber law\" AND \"privacy act\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -1908,7 +2124,8 @@
           "incident cost"
         ],
         "query": "\"cybersecurity act\" AND \"cyber law\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1917,7 +2134,8 @@
           "economic impact"
         ],
         "query": "\"cybersecurity act\" AND \"cyber law\" AND \"economic impact\"",
-        "count": 1
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -1926,7 +2144,8 @@
           "cybersecurity planning"
         ],
         "query": "\"cybersecurity act\" AND \"cyber law\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1935,7 +2154,8 @@
           "security program management"
         ],
         "query": "\"cybersecurity act\" AND \"cyber law\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1944,7 +2164,8 @@
           "security governance"
         ],
         "query": "\"cybersecurity act\" AND \"cyber law\" AND \"security governance\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -1953,7 +2174,8 @@
           "cyber incident response"
         ],
         "query": "\"cybersecurity act\" AND \"cyber law\" AND \"cyber incident response\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -1962,7 +2184,8 @@
           "cyber policy"
         ],
         "query": "\"cybersecurity act\" AND \"cyber law\" AND \"cyber policy\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -1971,7 +2194,8 @@
           "privacy act"
         ],
         "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"privacy act\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1980,7 +2204,8 @@
           "incident cost"
         ],
         "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1989,7 +2214,8 @@
           "economic impact"
         ],
         "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -1998,7 +2224,8 @@
           "cybersecurity planning"
         ],
         "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2007,7 +2234,8 @@
           "security program management"
         ],
         "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2016,7 +2244,8 @@
           "security governance"
         ],
         "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2025,7 +2254,8 @@
           "cyber incident response"
         ],
         "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2034,7 +2264,8 @@
           "cyber policy"
         ],
         "query": "\"cybersecurity act\" AND \"risk-based prioritization\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2043,7 +2274,8 @@
           "incident cost"
         ],
         "query": "\"cybersecurity act\" AND \"privacy act\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2052,7 +2284,8 @@
           "economic impact"
         ],
         "query": "\"cybersecurity act\" AND \"privacy act\" AND \"economic impact\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -2061,7 +2294,8 @@
           "cybersecurity planning"
         ],
         "query": "\"cybersecurity act\" AND \"privacy act\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2070,7 +2304,8 @@
           "security program management"
         ],
         "query": "\"cybersecurity act\" AND \"privacy act\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2079,7 +2314,8 @@
           "security governance"
         ],
         "query": "\"cybersecurity act\" AND \"privacy act\" AND \"security governance\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -2088,7 +2324,8 @@
           "cyber incident response"
         ],
         "query": "\"cybersecurity act\" AND \"privacy act\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2097,7 +2334,8 @@
           "cyber policy"
         ],
         "query": "\"cybersecurity act\" AND \"privacy act\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2106,7 +2344,8 @@
           "economic impact"
         ],
         "query": "\"cybersecurity act\" AND \"incident cost\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2115,7 +2354,8 @@
           "cybersecurity planning"
         ],
         "query": "\"cybersecurity act\" AND \"incident cost\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2124,7 +2364,8 @@
           "security program management"
         ],
         "query": "\"cybersecurity act\" AND \"incident cost\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2133,7 +2374,8 @@
           "security governance"
         ],
         "query": "\"cybersecurity act\" AND \"incident cost\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2142,7 +2384,8 @@
           "cyber incident response"
         ],
         "query": "\"cybersecurity act\" AND \"incident cost\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2151,7 +2394,8 @@
           "cyber policy"
         ],
         "query": "\"cybersecurity act\" AND \"incident cost\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2160,7 +2404,8 @@
           "cybersecurity planning"
         ],
         "query": "\"cybersecurity act\" AND \"economic impact\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2169,7 +2414,8 @@
           "security program management"
         ],
         "query": "\"cybersecurity act\" AND \"economic impact\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2178,7 +2424,8 @@
           "security governance"
         ],
         "query": "\"cybersecurity act\" AND \"economic impact\" AND \"security governance\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -2187,7 +2434,8 @@
           "cyber incident response"
         ],
         "query": "\"cybersecurity act\" AND \"economic impact\" AND \"cyber incident response\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -2196,7 +2444,8 @@
           "cyber policy"
         ],
         "query": "\"cybersecurity act\" AND \"economic impact\" AND \"cyber policy\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -2205,7 +2454,8 @@
           "security program management"
         ],
         "query": "\"cybersecurity act\" AND \"cybersecurity planning\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2214,7 +2464,8 @@
           "security governance"
         ],
         "query": "\"cybersecurity act\" AND \"cybersecurity planning\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2223,7 +2474,8 @@
           "cyber incident response"
         ],
         "query": "\"cybersecurity act\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2232,7 +2484,8 @@
           "cyber policy"
         ],
         "query": "\"cybersecurity act\" AND \"cybersecurity planning\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2241,7 +2494,8 @@
           "security governance"
         ],
         "query": "\"cybersecurity act\" AND \"security program management\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2250,7 +2504,8 @@
           "cyber incident response"
         ],
         "query": "\"cybersecurity act\" AND \"security program management\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2259,7 +2514,8 @@
           "cyber policy"
         ],
         "query": "\"cybersecurity act\" AND \"security program management\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2268,7 +2524,8 @@
           "cyber incident response"
         ],
         "query": "\"cybersecurity act\" AND \"security governance\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2277,7 +2534,8 @@
           "cyber policy"
         ],
         "query": "\"cybersecurity act\" AND \"security governance\" AND \"cyber policy\"",
-        "count": 3
+        "count": 3,
+        "error": false
       },
       {
         "keywords": [
@@ -2286,7 +2544,8 @@
           "cyber policy"
         ],
         "query": "\"cybersecurity act\" AND \"cyber incident response\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2295,7 +2554,8 @@
           "privacy act"
         ],
         "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"privacy act\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2304,7 +2564,8 @@
           "incident cost"
         ],
         "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2313,7 +2574,8 @@
           "economic impact"
         ],
         "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2322,7 +2584,8 @@
           "cybersecurity planning"
         ],
         "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2331,7 +2594,8 @@
           "security program management"
         ],
         "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2340,7 +2604,8 @@
           "security governance"
         ],
         "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2349,7 +2614,8 @@
           "cyber incident response"
         ],
         "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2358,7 +2624,8 @@
           "cyber policy"
         ],
         "query": "\"cyber law\" AND \"risk-based prioritization\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2367,7 +2634,8 @@
           "incident cost"
         ],
         "query": "\"cyber law\" AND \"privacy act\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2376,7 +2644,8 @@
           "economic impact"
         ],
         "query": "\"cyber law\" AND \"privacy act\" AND \"economic impact\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -2385,7 +2654,8 @@
           "cybersecurity planning"
         ],
         "query": "\"cyber law\" AND \"privacy act\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2394,7 +2664,8 @@
           "security program management"
         ],
         "query": "\"cyber law\" AND \"privacy act\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2403,7 +2674,8 @@
           "security governance"
         ],
         "query": "\"cyber law\" AND \"privacy act\" AND \"security governance\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -2412,7 +2684,8 @@
           "cyber incident response"
         ],
         "query": "\"cyber law\" AND \"privacy act\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2421,7 +2694,8 @@
           "cyber policy"
         ],
         "query": "\"cyber law\" AND \"privacy act\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2430,7 +2704,8 @@
           "economic impact"
         ],
         "query": "\"cyber law\" AND \"incident cost\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2439,7 +2714,8 @@
           "cybersecurity planning"
         ],
         "query": "\"cyber law\" AND \"incident cost\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2448,7 +2724,8 @@
           "security program management"
         ],
         "query": "\"cyber law\" AND \"incident cost\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2457,7 +2734,8 @@
           "security governance"
         ],
         "query": "\"cyber law\" AND \"incident cost\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2466,7 +2744,8 @@
           "cyber incident response"
         ],
         "query": "\"cyber law\" AND \"incident cost\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2475,7 +2754,8 @@
           "cyber policy"
         ],
         "query": "\"cyber law\" AND \"incident cost\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2484,7 +2764,8 @@
           "cybersecurity planning"
         ],
         "query": "\"cyber law\" AND \"economic impact\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2493,7 +2774,8 @@
           "security program management"
         ],
         "query": "\"cyber law\" AND \"economic impact\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2502,7 +2784,8 @@
           "security governance"
         ],
         "query": "\"cyber law\" AND \"economic impact\" AND \"security governance\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -2511,7 +2794,8 @@
           "cyber incident response"
         ],
         "query": "\"cyber law\" AND \"economic impact\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2520,7 +2804,8 @@
           "cyber policy"
         ],
         "query": "\"cyber law\" AND \"economic impact\" AND \"cyber policy\"",
-        "count": 3
+        "count": 4,
+        "error": false
       },
       {
         "keywords": [
@@ -2529,7 +2814,8 @@
           "security program management"
         ],
         "query": "\"cyber law\" AND \"cybersecurity planning\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2538,7 +2824,8 @@
           "security governance"
         ],
         "query": "\"cyber law\" AND \"cybersecurity planning\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2547,7 +2834,8 @@
           "cyber incident response"
         ],
         "query": "\"cyber law\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2556,7 +2844,8 @@
           "cyber policy"
         ],
         "query": "\"cyber law\" AND \"cybersecurity planning\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2565,7 +2854,8 @@
           "security governance"
         ],
         "query": "\"cyber law\" AND \"security program management\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2574,7 +2864,8 @@
           "cyber incident response"
         ],
         "query": "\"cyber law\" AND \"security program management\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2583,7 +2874,8 @@
           "cyber policy"
         ],
         "query": "\"cyber law\" AND \"security program management\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2592,7 +2884,8 @@
           "cyber incident response"
         ],
         "query": "\"cyber law\" AND \"security governance\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2601,7 +2894,8 @@
           "cyber policy"
         ],
         "query": "\"cyber law\" AND \"security governance\" AND \"cyber policy\"",
-        "count": 4
+        "count": 4,
+        "error": false
       },
       {
         "keywords": [
@@ -2610,7 +2904,8 @@
           "cyber policy"
         ],
         "query": "\"cyber law\" AND \"cyber incident response\" AND \"cyber policy\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -2619,7 +2914,8 @@
           "incident cost"
         ],
         "query": "\"risk-based prioritization\" AND \"privacy act\" AND \"incident cost\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2628,7 +2924,8 @@
           "economic impact"
         ],
         "query": "\"risk-based prioritization\" AND \"privacy act\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2637,7 +2934,8 @@
           "cybersecurity planning"
         ],
         "query": "\"risk-based prioritization\" AND \"privacy act\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2646,7 +2944,8 @@
           "security program management"
         ],
         "query": "\"risk-based prioritization\" AND \"privacy act\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2655,7 +2954,8 @@
           "security governance"
         ],
         "query": "\"risk-based prioritization\" AND \"privacy act\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2664,7 +2964,8 @@
           "cyber incident response"
         ],
         "query": "\"risk-based prioritization\" AND \"privacy act\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2673,7 +2974,8 @@
           "cyber policy"
         ],
         "query": "\"risk-based prioritization\" AND \"privacy act\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2682,7 +2984,8 @@
           "economic impact"
         ],
         "query": "\"risk-based prioritization\" AND \"incident cost\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2691,7 +2994,8 @@
           "cybersecurity planning"
         ],
         "query": "\"risk-based prioritization\" AND \"incident cost\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2700,7 +3004,8 @@
           "security program management"
         ],
         "query": "\"risk-based prioritization\" AND \"incident cost\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2709,7 +3014,8 @@
           "security governance"
         ],
         "query": "\"risk-based prioritization\" AND \"incident cost\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2718,7 +3024,8 @@
           "cyber incident response"
         ],
         "query": "\"risk-based prioritization\" AND \"incident cost\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2727,7 +3034,8 @@
           "cyber policy"
         ],
         "query": "\"risk-based prioritization\" AND \"incident cost\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2736,7 +3044,8 @@
           "cybersecurity planning"
         ],
         "query": "\"risk-based prioritization\" AND \"economic impact\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2745,7 +3054,8 @@
           "security program management"
         ],
         "query": "\"risk-based prioritization\" AND \"economic impact\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2754,7 +3064,8 @@
           "security governance"
         ],
         "query": "\"risk-based prioritization\" AND \"economic impact\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2763,7 +3074,8 @@
           "cyber incident response"
         ],
         "query": "\"risk-based prioritization\" AND \"economic impact\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2772,7 +3084,8 @@
           "cyber policy"
         ],
         "query": "\"risk-based prioritization\" AND \"economic impact\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2781,7 +3094,8 @@
           "security program management"
         ],
         "query": "\"risk-based prioritization\" AND \"cybersecurity planning\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2790,7 +3104,8 @@
           "security governance"
         ],
         "query": "\"risk-based prioritization\" AND \"cybersecurity planning\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2799,7 +3114,8 @@
           "cyber incident response"
         ],
         "query": "\"risk-based prioritization\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2808,7 +3124,8 @@
           "cyber policy"
         ],
         "query": "\"risk-based prioritization\" AND \"cybersecurity planning\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2817,7 +3134,8 @@
           "security governance"
         ],
         "query": "\"risk-based prioritization\" AND \"security program management\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2826,7 +3144,8 @@
           "cyber incident response"
         ],
         "query": "\"risk-based prioritization\" AND \"security program management\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2835,7 +3154,8 @@
           "cyber policy"
         ],
         "query": "\"risk-based prioritization\" AND \"security program management\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2844,7 +3164,8 @@
           "cyber incident response"
         ],
         "query": "\"risk-based prioritization\" AND \"security governance\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2853,7 +3174,8 @@
           "cyber policy"
         ],
         "query": "\"risk-based prioritization\" AND \"security governance\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2862,7 +3184,8 @@
           "cyber policy"
         ],
         "query": "\"risk-based prioritization\" AND \"cyber incident response\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2871,7 +3194,8 @@
           "economic impact"
         ],
         "query": "\"privacy act\" AND \"incident cost\" AND \"economic impact\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2880,7 +3204,8 @@
           "cybersecurity planning"
         ],
         "query": "\"privacy act\" AND \"incident cost\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2889,7 +3214,8 @@
           "security program management"
         ],
         "query": "\"privacy act\" AND \"incident cost\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2898,7 +3224,8 @@
           "security governance"
         ],
         "query": "\"privacy act\" AND \"incident cost\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2907,7 +3234,8 @@
           "cyber incident response"
         ],
         "query": "\"privacy act\" AND \"incident cost\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2916,7 +3244,8 @@
           "cyber policy"
         ],
         "query": "\"privacy act\" AND \"incident cost\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2925,7 +3254,8 @@
           "cybersecurity planning"
         ],
         "query": "\"privacy act\" AND \"economic impact\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2934,7 +3264,8 @@
           "security program management"
         ],
         "query": "\"privacy act\" AND \"economic impact\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2943,7 +3274,8 @@
           "security governance"
         ],
         "query": "\"privacy act\" AND \"economic impact\" AND \"security governance\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -2952,7 +3284,8 @@
           "cyber incident response"
         ],
         "query": "\"privacy act\" AND \"economic impact\" AND \"cyber incident response\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -2961,7 +3294,8 @@
           "cyber policy"
         ],
         "query": "\"privacy act\" AND \"economic impact\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2970,7 +3304,8 @@
           "security program management"
         ],
         "query": "\"privacy act\" AND \"cybersecurity planning\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2979,7 +3314,8 @@
           "security governance"
         ],
         "query": "\"privacy act\" AND \"cybersecurity planning\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2988,7 +3324,8 @@
           "cyber incident response"
         ],
         "query": "\"privacy act\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -2997,7 +3334,8 @@
           "cyber policy"
         ],
         "query": "\"privacy act\" AND \"cybersecurity planning\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3006,7 +3344,8 @@
           "security governance"
         ],
         "query": "\"privacy act\" AND \"security program management\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3015,7 +3354,8 @@
           "cyber incident response"
         ],
         "query": "\"privacy act\" AND \"security program management\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3024,7 +3364,8 @@
           "cyber policy"
         ],
         "query": "\"privacy act\" AND \"security program management\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3033,7 +3374,8 @@
           "cyber incident response"
         ],
         "query": "\"privacy act\" AND \"security governance\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3042,7 +3384,8 @@
           "cyber policy"
         ],
         "query": "\"privacy act\" AND \"security governance\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3051,7 +3394,8 @@
           "cyber policy"
         ],
         "query": "\"privacy act\" AND \"cyber incident response\" AND \"cyber policy\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -3060,7 +3404,8 @@
           "cybersecurity planning"
         ],
         "query": "\"incident cost\" AND \"economic impact\" AND \"cybersecurity planning\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3069,7 +3414,8 @@
           "security program management"
         ],
         "query": "\"incident cost\" AND \"economic impact\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3078,7 +3424,8 @@
           "security governance"
         ],
         "query": "\"incident cost\" AND \"economic impact\" AND \"security governance\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -3087,7 +3434,8 @@
           "cyber incident response"
         ],
         "query": "\"incident cost\" AND \"economic impact\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3096,7 +3444,8 @@
           "cyber policy"
         ],
         "query": "\"incident cost\" AND \"economic impact\" AND \"cyber policy\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -3105,7 +3454,8 @@
           "security program management"
         ],
         "query": "\"incident cost\" AND \"cybersecurity planning\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3114,7 +3464,8 @@
           "security governance"
         ],
         "query": "\"incident cost\" AND \"cybersecurity planning\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3123,7 +3474,8 @@
           "cyber incident response"
         ],
         "query": "\"incident cost\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3132,7 +3484,8 @@
           "cyber policy"
         ],
         "query": "\"incident cost\" AND \"cybersecurity planning\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3141,7 +3494,8 @@
           "security governance"
         ],
         "query": "\"incident cost\" AND \"security program management\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3150,7 +3504,8 @@
           "cyber incident response"
         ],
         "query": "\"incident cost\" AND \"security program management\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3159,7 +3514,8 @@
           "cyber policy"
         ],
         "query": "\"incident cost\" AND \"security program management\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3168,7 +3524,8 @@
           "cyber incident response"
         ],
         "query": "\"incident cost\" AND \"security governance\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3177,7 +3534,8 @@
           "cyber policy"
         ],
         "query": "\"incident cost\" AND \"security governance\" AND \"cyber policy\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -3186,7 +3544,8 @@
           "cyber policy"
         ],
         "query": "\"incident cost\" AND \"cyber incident response\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3195,7 +3554,8 @@
           "security program management"
         ],
         "query": "\"economic impact\" AND \"cybersecurity planning\" AND \"security program management\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3204,7 +3564,8 @@
           "security governance"
         ],
         "query": "\"economic impact\" AND \"cybersecurity planning\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3213,7 +3574,8 @@
           "cyber incident response"
         ],
         "query": "\"economic impact\" AND \"cybersecurity planning\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3222,7 +3584,8 @@
           "cyber policy"
         ],
         "query": "\"economic impact\" AND \"cybersecurity planning\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3231,7 +3594,8 @@
           "security governance"
         ],
         "query": "\"economic impact\" AND \"security program management\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3240,7 +3604,8 @@
           "cyber incident response"
         ],
         "query": "\"economic impact\" AND \"security program management\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3249,7 +3614,8 @@
           "cyber policy"
         ],
         "query": "\"economic impact\" AND \"security program management\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3258,7 +3624,8 @@
           "cyber incident response"
         ],
         "query": "\"economic impact\" AND \"security governance\" AND \"cyber incident response\"",
-        "count": 3
+        "count": 3,
+        "error": false
       },
       {
         "keywords": [
@@ -3267,7 +3634,8 @@
           "cyber policy"
         ],
         "query": "\"economic impact\" AND \"security governance\" AND \"cyber policy\"",
-        "count": 4
+        "count": 4,
+        "error": false
       },
       {
         "keywords": [
@@ -3276,7 +3644,8 @@
           "cyber policy"
         ],
         "query": "\"economic impact\" AND \"cyber incident response\" AND \"cyber policy\"",
-        "count": 2
+        "count": 2,
+        "error": false
       },
       {
         "keywords": [
@@ -3285,7 +3654,8 @@
           "security governance"
         ],
         "query": "\"cybersecurity planning\" AND \"security program management\" AND \"security governance\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3294,7 +3664,8 @@
           "cyber incident response"
         ],
         "query": "\"cybersecurity planning\" AND \"security program management\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3303,7 +3674,8 @@
           "cyber policy"
         ],
         "query": "\"cybersecurity planning\" AND \"security program management\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3312,7 +3684,8 @@
           "cyber incident response"
         ],
         "query": "\"cybersecurity planning\" AND \"security governance\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3321,7 +3694,8 @@
           "cyber policy"
         ],
         "query": "\"cybersecurity planning\" AND \"security governance\" AND \"cyber policy\"",
-        "count": 1
+        "count": 1,
+        "error": false
       },
       {
         "keywords": [
@@ -3330,7 +3704,8 @@
           "cyber policy"
         ],
         "query": "\"cybersecurity planning\" AND \"cyber incident response\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3339,7 +3714,8 @@
           "cyber incident response"
         ],
         "query": "\"security program management\" AND \"security governance\" AND \"cyber incident response\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3348,7 +3724,8 @@
           "cyber policy"
         ],
         "query": "\"security program management\" AND \"security governance\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3357,7 +3734,8 @@
           "cyber policy"
         ],
         "query": "\"security program management\" AND \"cyber incident response\" AND \"cyber policy\"",
-        "count": 0
+        "count": 0,
+        "error": false
       },
       {
         "keywords": [
@@ -3366,9 +3744,10 @@
           "cyber policy"
         ],
         "query": "\"security governance\" AND \"cyber incident response\" AND \"cyber policy\"",
-        "count": 4
+        "count": 4,
+        "error": false
       }
     ],
-    "total": 426
+    "total": 434
   }
 }
