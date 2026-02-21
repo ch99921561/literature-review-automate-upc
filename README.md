@@ -3,6 +3,7 @@
 Herramienta unificada para automatizar búsquedas en bases de datos académicas:
 - **Scopus** (API de Elsevier)
 - **IEEE Xplore** (API de IEEE)
+- **Web of Science** (API Starter de Clarivate)
 
 ## Arquitectura
 
@@ -11,7 +12,8 @@ El proyecto utiliza un diseño orientado a objetos con las siguientes clases pri
 ```
 BaseAPIClient (ABC)          # Clase base abstracta
 ├── ScopusAPIClient          # Cliente específico Scopus
-└── IEEEAPIClient            # Cliente específico IEEE
+├── IEEEAPIClient            # Cliente específico IEEE
+└── WOSAPIClient             # Cliente específico Web of Science
 
 SearchEngine                 # Coordina las búsquedas
 InputConfig                  # Configuración unificada
@@ -24,6 +26,7 @@ HTTPClient                   # Cliente HTTP genérico
 - Python 3.10+
 - API Key de Elsevier (https://dev.elsevier.com/)
 - API Key de IEEE (https://developer.ieee.org/member/register)
+- API Key de Web of Science (https://developer.clarivate.com/apis/wos-starter)
 
 ## Configuración
 
@@ -33,12 +36,14 @@ HTTPClient                   # Cliente HTTP genérico
 # PowerShell
 $Env:SCOPUS_API_KEY = "tu_api_key_scopus"
 $Env:IEEE_API_KEY = "tu_api_key_ieee"
+$Env:WOS_API_KEY = "tu_api_key_wos"
 ```
 
 ```bash
 # Bash/Linux
 export SCOPUS_API_KEY="tu_api_key_scopus"
 export IEEE_API_KEY="tu_api_key_ieee"
+export WOS_API_KEY="tu_api_key_wos"
 ```
 
 ### 2. Editar archivo de configuración
@@ -60,6 +65,11 @@ El archivo `input.json` contiene la configuración unificada:
   },
   "ieee": {
     "content_types": ["Journals", "Conferences"]
+  },
+  "wos": {
+    "database": "WOS",
+    "edition": null,
+    "document_types": ["Article", "Review"]
   }
 }
 ```
@@ -69,7 +79,7 @@ El archivo `input.json` contiene la configuración unificada:
 ### Modo Sencillo (conteo)
 
 ```powershell
-# Ejecutar ambas APIs
+# Ejecutar todas las APIs
 python main.py --sencilla
 
 # Solo Scopus
@@ -77,6 +87,9 @@ python main.py --sencilla --scopus
 
 # Solo IEEE
 python main.py --sencilla --ieee
+
+# Solo Web of Science
+python main.py --sencilla --wos
 ```
 
 **Funcionalidades:**
@@ -112,13 +125,16 @@ literature-review-automate-upc/
 ├── scopus_results.json     # Salida modo extendido Scopus
 ├── ieee_counts.json        # Salida modo sencillo IEEE
 ├── ieee_results.json       # Salida modo extendido IEEE
+├── wos_counts.json         # Salida modo sencillo WOS
+├── wos_results.json        # Salida modo extendido WOS
 ├── README.md               # Este archivo
 ├── docs/
 │   ├── sequence_diagram.txt      # Diagrama Scopus
 │   └── ieee_sequence_diagram.txt # Diagrama IEEE
 └── logs/
     ├── scopus_sencilla_*.log     # Logs Scopus
-    └── ieee_sencilla_*.log       # Logs IEEE
+    ├── ieee_sencilla_*.log       # Logs IEEE
+    └── wos_sencilla_*.log        # Logs WOS
 ```
 
 ## Archivo de Entrada (input.json)
@@ -131,6 +147,9 @@ literature-review-automate-upc/
 | `scopus.doc_types` | Tipos de documento Scopus | `["ar", "cp"]` |
 | `scopus.subject_areas` | Áreas temáticas Scopus | `["COMP"]` |
 | `ieee.content_types` | Tipos de contenido IEEE | `["Journals"]` |
+| `wos.database` | Base de datos WOS | `"WOS"` |
+| `wos.edition` | Edición WOS (null = todas) | `"WOS+SCI"` |
+| `wos.document_types` | Tipos de documento WOS | `["Article"]` |
 
 ### Tipos de documento Scopus
 
@@ -164,12 +183,49 @@ literature-review-automate-upc/
 | `Magazines` |
 | `Standards` |
 
+### Bases de datos Web of Science
+
+| Código | Nombre |
+|--------|--------|
+| `WOS` | Web of Science Core Collection |
+| `BIOABS` | Biological Abstracts |
+| `BCI` | BIOSIS Citation Index |
+| `BIOSIS` | BIOSIS Previews |
+| `CCC` | Current Contents Connect |
+| `DIIDW` | Derwent Innovations Index |
+| `DRCI` | Data Citation Index |
+| `MEDLINE` | MEDLINE |
+| `ZOOREC` | Zoological Records |
+| `PPRN` | Preprint Citation Index |
+| `WOK` | All databases |
+
+### Tipos de documento Web of Science
+
+| Tipo |
+|------|
+| `Article` |
+| `Review` |
+| `Proceedings Paper` |
+| `Editorial Material` |
+| `Book Chapter` |
+| `Letter` |
+| `Meeting Abstract` |
+
 ## Límites de las APIs
 
 | API | Max por request | Rate limit |
 |-----|-----------------|------------|
 | Scopus | 25 | ~2-9 req/seg |
 | IEEE | 200 | Según suscripción |
+| WOS Starter | 50 | 50-20,000 req/día (según plan) |
+
+### Planes Web of Science Starter API
+
+| Plan | Límite diario | Times Cited |
+|------|---------------|-------------|
+| Free Trial | 50 req/día | No |
+| Institutional Member | 5,000 req/día | Sí |
+| Institutional Integration | 20,000 req/día | Sí |
 
 ## Diagrama de Secuencia
 
@@ -188,7 +244,7 @@ Los archivos en `docs/` contienen diagramas de secuencia para visualizar en http
      │                │                    │                  │
      │                │ Por cada API       │                  │
      │                │───────────────────>│                  │
-     │                │   (Scopus/IEEE)    │                  │
+     │                │  (Scopus/IEEE/WOS) │                  │
      │                │<───────────────────│                  │
      │                │                    │                  │
      │                │ Guardar resultados │                  │
@@ -208,6 +264,28 @@ Los archivos en `docs/` contienen diagramas de secuencia para visualizar en http
 - [IEEE API Documentation](https://developer.ieee.org/docs)
 - [Search Parameters](https://developer.ieee.org/docs/read/Metadata_API_details)
 - [Boolean Operators](https://developer.ieee.org/docs/read/metadata_api_details/Leveraging_Boolean_Logic)
+
+### Web of Science Starter
+- [WOS Starter API](https://developer.clarivate.com/apis/wos-starter)
+- [API Swagger](https://api.clarivate.com/swagger-ui/?url=https://developer.clarivate.com/apis/wos-starter/swagger)
+- [Advanced Search Query Builder](https://webofscience.help.clarivate.com/en-us/Content/advanced-search.html)
+- [WOS Release Notes](https://clarivate.com/academia-government/release-notes/wos-apis/)
+
+#### Field Tags soportados por WOS Starter API
+
+| Tag | Descripción |
+|-----|-------------|
+| `TS` | Topic Search (título, abstract, keywords) |
+| `TI` | Título del documento |
+| `AU` | Autor |
+| `AI` | Author Identifier |
+| `PY` | Año de publicación |
+| `DT` | Document Type |
+| `DO` | DOI |
+| `IS` | ISSN o ISBN |
+| `SO` | Source title |
+| `UT` | Accession Number |
+| `OG` | Organization |
 
 ## Archivos Legacy
 
