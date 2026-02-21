@@ -15,7 +15,19 @@
     "cyber incident response",
     "cyber policy"
   ],
-  "content_types": [],
-  "start_year": 2020,
-  "end_year": 2025
+  "year_from": 2020,
+  "year_to": 2025,
+  "scopus": {
+    "doc_types": ["ar", "re", "cp", "bk"],
+    "subject_areas": []
+  },
+  "ieee": {
+    "content_types": []
+  },
+  "wos": {
+    "database": "WOS",
+    "edition": null,
+    "document_types": ["Article", "Review", "Proceedings Paper", "Book Chapter"],
+    "sort_field": "LD+D"
+  }
 }
