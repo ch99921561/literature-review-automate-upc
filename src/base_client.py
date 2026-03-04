@@ -3,6 +3,7 @@ Clase base abstracta para clientes de API.
 """
 
 import os
+import time
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional
 
@@ -121,7 +122,7 @@ class BaseAPIClient(ABC):
     
     def get_document_titles(self, query: str, filters: SearchFilters, max_docs: int = 200) -> List[str]:
         """
-        Obtiene los títulos de documentos para una query.
+        Obtiene los títulos de documentos para una query con paginación.
         
         Args:
             query: Query de búsqueda
@@ -131,16 +132,37 @@ class BaseAPIClient(ABC):
         Returns:
             Lista de títulos de documentos
         """
-        url = self.build_query_url(query, filters, 
-                                   max_records=min(max_docs, self.config.max_per_request), start=1)
-        response = self.http.get(url, headers=self._get_headers(), verbose=False,
-                                 mask_key=self._get_mask_key())
+        all_titles = []
+        page_size = self.config.max_per_request
+        start = 1  # La mayoría de APIs usan 1-indexed
+        total_results = None
         
-        if "error" in response:
-            return []
+        while len(all_titles) < max_docs:
+            url = self.build_query_url(query, filters, max_records=page_size, start=start)
+            response = self.http.get(url, headers=self._get_headers(), verbose=False,
+                                     mask_key=self._get_mask_key())
+            
+            if "error" in response:
+                break
+            
+            if total_results is None:
+                total_results = self.parse_total_results(response)
+            
+            entries = self.parse_entries(response)
+            if not entries:
+                break
+            
+            titles = self.extract_document_titles(entries)
+            all_titles.extend(titles)
+            
+            start += page_size
+            if start > (total_results or 0):
+                break
+            
+            # Pequeña pausa entre páginas
+            time.sleep(0.15)
         
-        entries = self.parse_entries(response)
-        return self.extract_document_titles(entries)
+        return all_titles[:max_docs]
     
     def get_api_name(self) -> str:
         """Retorna el nombre de la API."""

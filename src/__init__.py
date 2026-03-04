@@ -17,6 +17,7 @@ from .ieee_client import IEEEAPIClient
 from .wos_client import WOSAPIClient
 from .input_config import InputConfig
 from .search_engine import SearchEngine, run_extended_mode
+from .phase2_processor import Phase2Processor, run_phase2
 
 __all__ = [
     # Config
@@ -31,4 +32,6 @@ __all__ = [
     'ScopusAPIClient', 'IEEEAPIClient', 'WOSAPIClient',
     # Config & Engine
     'InputConfig', 'SearchEngine', 'run_extended_mode',
+    # Phase 2
+    'Phase2Processor', 'run_phase2',
 ]

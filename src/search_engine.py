@@ -10,6 +10,9 @@ from datetime import datetime
 from typing import Dict, List, Optional, Tuple, Any
 import json
 
+from openpyxl import Workbook
+from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
+
 from .config import (
     APIType, API_CONFIGS, OUTPUTS_DIR, CONSOLIDATED_OUTPUT_PREFIX
 )
@@ -321,7 +324,7 @@ class SearchEngine:
     
     def save_consolidated_top30(self, all_results: Dict[APIType, List[CombinationResult]]) -> str:
         """
-        Guarda un archivo consolidado con el TOP 30 en formato tabla de texto.
+        Guarda un archivo consolidado con el TOP 30 en formato Excel (.xlsx).
         
         Args:
             all_results: Diccionario {APIType: List[CombinationResult]} con resultados por API
@@ -330,25 +333,40 @@ class SearchEngine:
             Nombre del archivo generado
         """
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = os.path.join(OUTPUTS_DIR, f"{CONSOLIDATED_OUTPUT_PREFIX}_{timestamp}.txt")
+        filename = os.path.join(OUTPUTS_DIR, f"{CONSOLIDATED_OUTPUT_PREFIX}_{timestamp}.xlsx")
         
         # Determinar qué APIs fueron ejecutadas
         apis_executed = list(all_results.keys())
         apis_names = [api.value for api in apis_executed]
         
-        lines = []
-        lines.append("=" * 100)
-        lines.append("  TOP 30 COMBINACIONES CON MÁS RESULTADOS - REPORTE CONSOLIDADO")
-        lines.append("=" * 100)
-        lines.append("")
-        lines.append(f"Fecha y hora: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        lines.append(f"Archivo de entrada: definitions/input.json")
-        lines.append(f"APIs ejecutadas: {', '.join(apis_names)}")
-        lines.append(f"Keywords: {len(self.config.keywords)}")
-        lines.append(f"Rango de años: {self.config.year_from or 'Sin límite'} - {self.config.year_to or 'Sin límite'}")
-        lines.append("")
+        # Crear workbook
+        wb = Workbook()
         
-        # TOP 30 por cada API
+        # Estilos
+        header_font = Font(bold=True, color="FFFFFF")
+        header_fill = PatternFill(start_color="4472C4", end_color="4472C4", fill_type="solid")
+        border = Border(
+            left=Side(style='thin'),
+            right=Side(style='thin'),
+            top=Side(style='thin'),
+            bottom=Side(style='thin')
+        )
+        
+        # Hoja de resumen
+        ws_summary = wb.active
+        ws_summary.title = "Resumen"
+        ws_summary['A1'] = "TOP 30 COMBINACIONES - REPORTE CONSOLIDADO"
+        ws_summary['A1'].font = Font(bold=True, size=14)
+        ws_summary['A3'] = "Fecha y hora:"
+        ws_summary['B3'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        ws_summary['A4'] = "APIs ejecutadas:"
+        ws_summary['B4'] = ', '.join(apis_names)
+        ws_summary['A5'] = "Keywords:"
+        ws_summary['B5'] = len(self.config.keywords)
+        ws_summary['A6'] = "Rango de años:"
+        ws_summary['B6'] = f"{self.config.year_from or 'Sin límite'} - {self.config.year_to or 'Sin límite'}"
+        
+        # Crear hojas por API
         for api_type, combinations in all_results.items():
             api_name = api_type.value.upper()
             
@@ -356,99 +374,74 @@ class SearchEngine:
             with_results = [r for r in combinations if r.count and r.count > 0]
             with_results.sort(key=lambda x: x.count or 0, reverse=True)
             
-            lines.append("=" * 100)
-            lines.append(f"  [{api_name}] TOP 30 COMBINACIONES")
-            lines.append("=" * 100)
-            lines.append("")
-            lines.append(f"Total de combinaciones con resultados: {len(with_results)}")
-            lines.append("")
+            if not with_results:
+                continue
             
-            if with_results:
-                # Encabezado de tabla
-                lines.append(f"{'Rank':<6} | {'Resultados':>12} | {'Keyword 1':<28} | {'Keyword 2':<28} | {'Keyword 3':<28}")
-                lines.append("-" * 110)
-                
-                # Datos TOP 30
-                for i, r in enumerate(with_results[:30], 1):
-                    k1 = r.keywords[0][:27] if len(r.keywords[0]) > 27 else r.keywords[0]
-                    k2 = r.keywords[1][:27] if len(r.keywords[1]) > 27 else r.keywords[1]
-                    k3 = r.keywords[2][:27] if len(r.keywords[2]) > 27 else r.keywords[2]
-                    lines.append(f"{i:<6} | {r.count:>12,} | {k1:<28} | {k2:<28} | {k3:<28}")
-                
-                lines.append("-" * 110)
-                lines.append("")
-                
-                # Queries enviadas
-                lines.append("Queries enviadas:")
-                for i, r in enumerate(with_results[:30], 1):
-                    lines.append(f"  {i:2}. {r.query}")
-                lines.append("")
-                
-                # Documentos por llave
-                if any(r.documents for r in with_results[:30]):
-                    lines.append("")
-                    lines.append(f"{'='*100}")
-                    lines.append(f"  [{api_name}] DOCUMENTOS POR LLAVE (TOP 30)")
-                    lines.append(f"{'='*100}")
-                    
-                    for i, r in enumerate(with_results[:30], 1):
-                        lines.append("")
-                        lines.append(f"--- LLAVE {i} ({r.count:,} resultados) ---")
-                        lines.append(f"Keywords: {' AND '.join(r.keywords)}")
-                        if r.documents:
-                            for doc_idx, title in enumerate(r.documents, 1):
-                                display_title = title[:115] + "..." if len(title) > 115 else title
-                                lines.append(f"  {doc_idx:3}. {display_title}")
-                        else:
-                            lines.append("  (Sin documentos recuperados)")
-            else:
-                lines.append("  (Sin combinaciones con resultados)")
+            # Hoja de combinaciones TOP 30
+            ws_combo = wb.create_sheet(title=f"{api_name}_TOP30")
             
-            lines.append("")
-        
-        # Si hay múltiples APIs, agregar TOP 30 global
-        if len(apis_executed) > 1:
-            lines.append("=" * 100)
-            lines.append("  TOP 30 GLOBAL (TODAS LAS APIs)")
-            lines.append("=" * 100)
-            lines.append("")
+            # Headers
+            headers = ["Rank", "Resultados", "Keyword 1", "Keyword 2", "Keyword 3", "Query"]
+            for col, header in enumerate(headers, 1):
+                cell = ws_combo.cell(row=1, column=col, value=header)
+                cell.font = header_font
+                cell.fill = header_fill
+                cell.border = border
+                cell.alignment = Alignment(horizontal='center')
             
-            # Combinar todos los resultados
-            all_combinations = []
-            for api_type, combinations in all_results.items():
-                for r in combinations:
-                    if r.count and r.count > 0:
-                        all_combinations.append({
-                            "api": api_type.value,
-                            "keywords": r.keywords,
-                            "count": r.count,
-                            "query": r.query
-                        })
+            # Datos
+            for i, r in enumerate(with_results[:30], 1):
+                row = i + 1
+                ws_combo.cell(row=row, column=1, value=i).border = border
+                ws_combo.cell(row=row, column=2, value=r.count).border = border
+                ws_combo.cell(row=row, column=3, value=r.keywords[0]).border = border
+                ws_combo.cell(row=row, column=4, value=r.keywords[1]).border = border
+                ws_combo.cell(row=row, column=5, value=r.keywords[2]).border = border
+                ws_combo.cell(row=row, column=6, value=r.query).border = border
             
-            all_combinations.sort(key=lambda x: x["count"], reverse=True)
+            # Ajustar anchos
+            ws_combo.column_dimensions['A'].width = 8
+            ws_combo.column_dimensions['B'].width = 12
+            ws_combo.column_dimensions['C'].width = 30
+            ws_combo.column_dimensions['D'].width = 30
+            ws_combo.column_dimensions['E'].width = 30
+            ws_combo.column_dimensions['F'].width = 80
             
-            lines.append(f"{'Rank':<6} | {'API':<8} | {'Resultados':>12} | {'Keyword 1':<25} | {'Keyword 2':<25} | {'Keyword 3':<25}")
-            lines.append("-" * 115)
+            # Hoja de documentos
+            ws_docs = wb.create_sheet(title=f"{api_name}_Documentos")
             
-            for i, combo in enumerate(all_combinations[:30], 1):
-                k1 = combo["keywords"][0][:24] if len(combo["keywords"][0]) > 24 else combo["keywords"][0]
-                k2 = combo["keywords"][1][:24] if len(combo["keywords"][1]) > 24 else combo["keywords"][1]
-                k3 = combo["keywords"][2][:24] if len(combo["keywords"][2]) > 24 else combo["keywords"][2]
-                lines.append(f"{i:<6} | {combo['api']:<8} | {combo['count']:>12,} | {k1:<25} | {k2:<25} | {k3:<25}")
+            # Headers documentos
+            doc_headers = ["Llave", "Keywords", "Titulo", "API_Source"]
+            for col, header in enumerate(doc_headers, 1):
+                cell = ws_docs.cell(row=1, column=col, value=header)
+                cell.font = header_font
+                cell.fill = header_fill
+                cell.border = border
+                cell.alignment = Alignment(horizontal='center')
             
-            lines.append("-" * 115)
-            lines.append("")
-        
-        lines.append("=" * 100)
-        lines.append("  FIN DEL REPORTE")
-        lines.append("=" * 100)
+            # Datos documentos
+            doc_row = 2
+            for i, r in enumerate(with_results[:30], 1):
+                if r.documents:
+                    keywords_str = " AND ".join(r.keywords)
+                    for title in r.documents:
+                        ws_docs.cell(row=doc_row, column=1, value=i).border = border
+                        ws_docs.cell(row=doc_row, column=2, value=keywords_str).border = border
+                        ws_docs.cell(row=doc_row, column=3, value=title).border = border
+                        ws_docs.cell(row=doc_row, column=4, value=api_type.value).border = border
+                        doc_row += 1
+            
+            # Ajustar anchos documentos
+            ws_docs.column_dimensions['A'].width = 8
+            ws_docs.column_dimensions['B'].width = 60
+            ws_docs.column_dimensions['C'].width = 100
+            ws_docs.column_dimensions['D'].width = 12
         
         # Guardar archivo
-        with open(filename, "w", encoding="utf-8") as f:
-            f.write("\n".join(lines))
+        wb.save(filename)
         
         print(f"\n{'='*80}")
-        print(f"  ARCHIVO CONSOLIDADO GENERADO")
+        print(f"  ARCHIVO CONSOLIDADO GENERADO (XLSX)")
         print(f"{'='*80}")
         print(f"Archivo: {filename}")
         print(f"APIs incluidas: {', '.join(apis_names)}")
