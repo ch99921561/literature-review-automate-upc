@@ -168,3 +168,35 @@ class BaseAPIClient(ABC):
     def get_api_name(self) -> str:
         """Retorna el nombre de la API."""
         return self.config.api_type.value
+
+    @staticmethod
+    def get_download_url(entry: Dict[str, Any]) -> str:
+        """Extrae una URL explícita de PDF o texto completo desde metadatos."""
+        for field in ("pdf_url", "full_text_url", "fulltext_url", "download_url"):
+            value = entry.get(field)
+            if isinstance(value, str) and value.startswith(("http://", "https://")):
+                return value
+
+        links = entry.get("links") or entry.get("link") or []
+        if isinstance(links, dict):
+            links = [links]
+        if not isinstance(links, list):
+            return ""
+
+        for link in links:
+            if not isinstance(link, dict):
+                continue
+            relation = str(
+                link.get("@ref")
+                or link.get("ref")
+                or link.get("type")
+                or link.get("rel")
+                or ""
+            ).lower()
+            if "pdf" not in relation and "full" not in relation:
+                continue
+            value = link.get("@href") or link.get("href") or link.get("url")
+            if isinstance(value, str) and value.startswith(("http://", "https://")):
+                return value
+
+        return ""

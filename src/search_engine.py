@@ -734,7 +734,14 @@ class SearchEngine:
             ws_docs = wb.create_sheet(title=f"{api_name}_Documentos")
             
             # Headers documentos
-            doc_headers = ["Llave", "Keywords", "Titulo", "Año de publicación", "API_Source"]
+            doc_headers = [
+                "Llave",
+                "Keywords",
+                "Titulo",
+                "Año de publicación",
+                "Posible URL de descarga",
+                "API_Source",
+            ]
             for col, header in enumerate(doc_headers, 1):
                 cell = ws_docs.cell(row=1, column=col, value=header)
                 cell.font = header_font
@@ -752,7 +759,12 @@ class SearchEngine:
                         ws_docs.cell(row=doc_row, column=2, value=keywords_str).border = border
                         ws_docs.cell(row=doc_row, column=3, value=document["titulo"]).border = border
                         ws_docs.cell(row=doc_row, column=4, value=document["año_publicacion"] or "No disponible").border = border
-                        ws_docs.cell(row=doc_row, column=5, value=api_type.value).border = border
+                        ws_docs.cell(
+                            row=doc_row,
+                            column=5,
+                            value=document.get("url_descarga") or "No disponible",
+                        ).border = border
+                        ws_docs.cell(row=doc_row, column=6, value=api_type.value).border = border
                         doc_row += 1
             
             # Ajustar anchos documentos
@@ -760,7 +772,8 @@ class SearchEngine:
             ws_docs.column_dimensions['B'].width = 60
             ws_docs.column_dimensions['C'].width = 100
             ws_docs.column_dimensions['D'].width = 20
-            ws_docs.column_dimensions['E'].width = 12
+            ws_docs.column_dimensions['E'].width = 80
+            ws_docs.column_dimensions['F'].width = 12
         
         # Guardar archivo
         wb.save(filename)
