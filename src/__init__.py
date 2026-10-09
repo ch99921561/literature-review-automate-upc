@@ -4,7 +4,14 @@ Literature Review Automation Tool - Source Package
 Módulos para búsqueda automatizada en APIs académicas.
 """
 
-from .config import APIType, API_CONFIGS, DEFINITIONS_DIR, OUTPUTS_DIR, LOG_DIR
+from .config import (
+    APIType,
+    API_CONFIGS,
+    DEFINITIONS_DIR,
+    OUTPUTS_DIR,
+    LOG_DIR,
+    load_and_validate_environment,
+)
 from .models import (
     SearchFilters, ScopusFilters, IEEEFilters, WOSFilters,
     SearchResult, CombinationResult, APIConfig
@@ -22,6 +29,7 @@ from .phase2_processor import Phase2Processor, run_phase2
 __all__ = [
     # Config
     'APIType', 'API_CONFIGS', 'DEFINITIONS_DIR', 'OUTPUTS_DIR', 'LOG_DIR',
+    'load_and_validate_environment',
     # Models
     'SearchFilters', 'ScopusFilters', 'IEEEFilters', 'WOSFilters',
     'SearchResult', 'CombinationResult', 'APIConfig',

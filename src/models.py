@@ -3,7 +3,7 @@ Modelos de datos (dataclasses) para el sistema.
 """
 
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import Dict, List, Optional
 from enum import Enum
 
 
@@ -82,4 +82,4 @@ class CombinationResult:
     query: str
     count: Optional[int]
     error: bool = False
-    documents: List[str] = field(default_factory=list)  # Títulos de documentos encontrados
+    documents: List[Dict[str, str]] = field(default_factory=list)

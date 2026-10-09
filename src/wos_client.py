@@ -244,7 +244,7 @@ class WOSAPIClient(BaseAPIClient):
         """WOS usa header para API key, no necesita enmascarar en URL."""
         return None
     
-    def extract_document_titles(self, entries: List[Dict[str, Any]]) -> List[str]:
+    def extract_documents(self, entries: List[Dict[str, Any]]) -> List[Dict[str, str]]:
         """
         Extrae los títulos de los documentos de WOS.
         
@@ -259,9 +259,10 @@ class WOSAPIClient(BaseAPIClient):
             }
         }
         """
-        titles = []
+        documents = []
         for entry in entries:
             title = None
+            publication_year = ""
             
             # WoS API: Estructura anidada en static_data
             static_data = entry.get('static_data', {})
@@ -278,14 +279,27 @@ class WOSAPIClient(BaseAPIClient):
                             break
                 elif isinstance(title_list, dict):
                     title = title_list.get('content', '')
+
+                pub_info = summary.get("pub_info", {})
+                publication_year = str(pub_info.get("pubyear") or "")
             
             # Fallback: WOS Starter API usa el campo 'title' directamente
             if not title:
                 title = entry.get('title', '')
+            if not publication_year:
+                publication_year = str(
+                    entry.get("publishYear")
+                    or entry.get("publication_year")
+                    or entry.get("year")
+                    or ""
+                )
             
             if title:
-                titles.append(title)
-        return titles
+                documents.append({
+                    "titulo": title,
+                    "año_publicacion": publication_year,
+                })
+        return documents
     
     def get_document_by_uid(self, uid: str) -> Dict[str, Any]:
         """
