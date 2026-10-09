@@ -136,7 +136,8 @@ python main.py --sencilla --titulo-tesis 2
 3. TOP 30 combinaciones con más resultados
 4. Log con timestamp
 5. Hojas `SCOPUS_Documentos`, `IEEE_Documentos` y `WOS_Documentos` con
-   título y año de publicación cuando la API lo proporciona
+   título, año de publicación y posible URL de descarga cuando la API la
+   proporciona explícitamente
 6. Hoja `Keywords_Sin_Combinacion` con keywords no usadas en ternas, su conteo
    individual y un motivo para orientar el ajuste de `input.json`
 7. Hoja `Ternas_No_Ejecutadas` con las ternas de keywords que tenían conteos
@@ -147,6 +148,10 @@ python main.py --sencilla --titulo-tesis 2
 Las hojas `*_Documentos` recuperan todos los registros que la API devuelve
 para cada terna del TOP 30, hasta el límite operativo de 200 documentos por
 terna.
+
+La columna `Posible URL de descarga` solo se completa con enlaces explícitos
+de PDF o texto completo incluidos en los metadatos. No se incluyen páginas de
+metadatos, enlaces de pago ni URLs inferidas.
 
 ### Modo Extendido (resultados detallados)
 

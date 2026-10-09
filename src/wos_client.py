@@ -298,6 +298,7 @@ class WOSAPIClient(BaseAPIClient):
                 documents.append({
                     "titulo": title,
                     "año_publicacion": publication_year,
+                    "url_descarga": self.get_download_url(entry),
                 })
         return documents
     

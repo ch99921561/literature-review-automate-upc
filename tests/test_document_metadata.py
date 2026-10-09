@@ -16,7 +16,11 @@ class DocumentMetadataTests(unittest.TestCase):
         ])
 
         self.assertEqual(
-            [{"titulo": "Scopus document", "año_publicacion": "2024"}],
+            [{
+                "titulo": "Scopus document",
+                "año_publicacion": "2024",
+                "url_descarga": "",
+            }],
             documents,
         )
 
@@ -26,7 +30,11 @@ class DocumentMetadataTests(unittest.TestCase):
         ])
 
         self.assertEqual(
-            [{"titulo": "IEEE document", "año_publicacion": "2023"}],
+            [{
+                "titulo": "IEEE document",
+                "año_publicacion": "2023",
+                "url_descarga": "",
+            }],
             documents,
         )
 
@@ -43,8 +51,24 @@ class DocumentMetadataTests(unittest.TestCase):
         }])
 
         self.assertEqual(
-            [{"titulo": "WOS document", "año_publicacion": "2022"}],
+            [{
+                "titulo": "WOS document",
+                "año_publicacion": "2022",
+                "url_descarga": "",
+            }],
             documents,
+        )
+
+    def test_extracts_explicit_full_text_url(self) -> None:
+        documents = IEEEAPIClient().extract_documents([{
+            "title": "IEEE document",
+            "publication_year": "2023",
+            "links": [{"type": "pdf", "href": "https://example.org/document.pdf"}],
+        }])
+
+        self.assertEqual(
+            "https://example.org/document.pdf",
+            documents[0]["url_descarga"],
         )
 
     def test_scopus_document_pagination_starts_at_zero(self) -> None:
@@ -79,8 +103,16 @@ class DocumentMetadataTests(unittest.TestCase):
         self.assertEqual([0], requested_starts)
         self.assertEqual(
             [
-                {"titulo": "Document 0", "año_publicacion": "2026"},
-                {"titulo": "Document 1", "año_publicacion": "2026"},
+                {
+                    "titulo": "Document 0",
+                    "año_publicacion": "2026",
+                    "url_descarga": "",
+                },
+                {
+                    "titulo": "Document 1",
+                    "año_publicacion": "2026",
+                    "url_descarga": "",
+                },
             ],
             documents,
         )
