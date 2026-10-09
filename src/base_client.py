@@ -116,13 +116,14 @@ class BaseAPIClient(ABC):
         pass
     
     @abstractmethod
-    def extract_document_titles(self, entries: List[Dict[str, Any]]) -> List[str]:
-        """Extrae los títulos de los documentos. Implementar en subclases."""
+    def extract_documents(self, entries: List[Dict[str, Any]]) -> List[Dict[str, str]]:
+        """Extrae título y año de publicación. Implementar en subclases."""
         pass
     
-    def get_document_titles(self, query: str, filters: SearchFilters, max_docs: int = 200) -> List[str]:
+    def get_documents(self, query: str, filters: SearchFilters,
+                      max_docs: int = 200) -> List[Dict[str, str]]:
         """
-        Obtiene los títulos de documentos para una query con paginación.
+        Obtiene títulos y años de publicación para una query con paginación.
         
         Args:
             query: Query de búsqueda
@@ -130,14 +131,14 @@ class BaseAPIClient(ABC):
             max_docs: Máximo de documentos a recuperar
         
         Returns:
-            Lista de títulos de documentos
+            Lista de documentos con título y año de publicación
         """
-        all_titles = []
+        all_documents = []
         page_size = self.config.max_per_request
-        start = 1  # La mayoría de APIs usan 1-indexed
+        start = 0 if self.config.api_type.value == "scopus" else 1
         total_results = None
         
-        while len(all_titles) < max_docs:
+        while len(all_documents) < max_docs:
             url = self.build_query_url(query, filters, max_records=page_size, start=start)
             response = self.http.get(url, headers=self._get_headers(), verbose=False,
                                      mask_key=self._get_mask_key())
@@ -152,8 +153,8 @@ class BaseAPIClient(ABC):
             if not entries:
                 break
             
-            titles = self.extract_document_titles(entries)
-            all_titles.extend(titles)
+            documents = self.extract_documents(entries)
+            all_documents.extend(documents)
             
             start += page_size
             if start > (total_results or 0):
@@ -162,7 +163,7 @@ class BaseAPIClient(ABC):
             # Pequeña pausa entre páginas
             time.sleep(0.15)
         
-        return all_titles[:max_docs]
+        return all_documents[:max_docs]
     
     def get_api_name(self) -> str:
         """Retorna el nombre de la API."""
