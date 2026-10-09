@@ -22,10 +22,7 @@ Uso:
     python main.py --extendida
 
 Configuración:
-    1. Configurar variables de entorno:
-       $Env:SCOPUS_API_KEY = "tu_api_key"
-       $Env:IEEE_API_KEY = "tu_api_key"
-       $Env:WOS_API_KEY = "tu_api_key"
+    1. Copiar .env.example a .env y completar las variables.
     2. Editar definitions/input.json con keywords y filtros
 """
 
@@ -39,6 +36,7 @@ from src import (
     ScopusAPIClient,
     IEEEAPIClient,
     WOSAPIClient,
+    load_and_validate_environment,
     run_extended_mode,
     run_phase2,
 )
@@ -46,6 +44,12 @@ from src import (
 
 def main() -> int:
     """Función principal."""
+    try:
+        load_and_validate_environment()
+    except ValueError as error:
+        print(f"ERROR de configuración: {error}")
+        return 1
+
     parser = argparse.ArgumentParser(
         description="Literature Review Automation - Búsqueda en Scopus, IEEE Xplore y Web of Science",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -55,6 +59,7 @@ Ejemplos:
   python main.py --phase1              # Todas las APIs
   python main.py --phase1 --scopus     # Solo Scopus
   python main.py --phase1 --wos        # Solo Web of Science
+  python main.py --phase1 --titulo-tesis 2
   
   # Phase 2: Obtención de abstracts
   python main.py --phase2 --input outputs/output_consolidado_20260221.xlsx
@@ -63,10 +68,9 @@ Ejemplos:
   python main.py --extendida
 
 Configuración:
-  1. $Env:SCOPUS_API_KEY = "tu_api_key"
-  2. $Env:IEEE_API_KEY = "tu_api_key"
-  3. $Env:WOS_API_KEY = "tu_api_key"
-  4. Editar definitions/input.json
+  1. Copiar .env.example a .env
+  2. Configurar APP_ENV y las API keys en .env
+  3. Editar definitions/input.json
 """
     )
     parser.add_argument("--phase1", "-p1", action="store_true",
@@ -85,6 +89,8 @@ Configuración:
                         help="Solo ejecutar IEEE")
     parser.add_argument("--wos", action="store_true",
                         help="Solo ejecutar Web of Science")
+    parser.add_argument("--titulo-tesis", type=str, metavar="ID",
+                        help="ID de tesis en definitions/input.json; sobrescribe titulo_tesis")
     
     args = parser.parse_args()
     
@@ -171,7 +177,12 @@ def _create_engine(args) -> SearchEngine:
         return None
     
     # Cargar configuración
-    if not engine.load_config():
+    try:
+        loaded = engine.load_config(args.titulo_tesis)
+    except ValueError as error:
+        print(f"\nERROR de configuración: {error}")
+        return None
+    if not loaded:
         return None
     
     return engine

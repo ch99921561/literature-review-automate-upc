@@ -57,14 +57,21 @@ class IEEEAPIClient(BaseAPIClient):
         """Extrae las entradas de la respuesta de IEEE."""
         return response.get("articles", [])
     
-    def extract_document_titles(self, entries: List[Dict[str, Any]]) -> List[str]:
-        """Extrae los títulos de los documentos de IEEE."""
-        titles = []
+    def extract_documents(self, entries: List[Dict[str, Any]]) -> List[Dict[str, str]]:
+        """Extrae los títulos y años de publicación de documentos IEEE."""
+        documents = []
         for entry in entries:
             title = entry.get('title', '')
             if title:
-                titles.append(title)
-        return titles
+                publication_year = str(entry.get("publication_year") or "")
+                if not publication_year:
+                    publication_date = str(entry.get("publication_date") or "")
+                    publication_year = publication_date[-4:] if publication_date[-4:].isdigit() else ""
+                documents.append({
+                    "titulo": title,
+                    "año_publicacion": publication_year,
+                })
+        return documents
     
     def _get_headers(self) -> Optional[Dict[str, str]]:
         """IEEE usa API key en URL, no necesita headers especiales."""
