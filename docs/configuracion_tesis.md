@@ -66,3 +66,8 @@ La hoja `Ternas_Sin_Resultados` muestra un caso diferente: las tres keywords
 tenían resultados individuales positivos y la terna se consultó, pero su
 consulta `AND` devolvió 0. Esta información también aparece en el log y en el
 resumen impreso al finalizar la ejecución.
+
+Las hojas `*_Documentos` incluyen la columna `Posible URL de descarga`. Solo
+se llena cuando la API entrega un enlace explícito de PDF o texto completo; de
+lo contrario muestra `No disponible`. El programa no infiere ni intenta
+acceder a enlaces restringidos.
